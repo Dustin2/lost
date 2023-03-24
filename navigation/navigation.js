@@ -7,21 +7,21 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import "react-native-gesture-handler";
 
-import { Colors } from "./assets/colors";
+import { Colors } from "./colors";
 
 ///screens//
 import { Inicio } from "./screens/Inicio";
 import { CreateUserScreen } from "./screens/CreateUserScreen";
 import { Map } from "./screens/Map";
 
-import Test  from "./screens/test.js";
+///components//
 import CustomMenu from "./components/CustomMenu";
 //icons//
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 const Menu = createDrawerNavigator();
 
-export default function App() {
+export default function navigation() {
   return (
     <NavigationContainer>
       <Menu.Navigator
@@ -50,15 +50,7 @@ export default function App() {
             ),
           }}
         />
-        <Menu.Screen
-          name="test"
-          component={Test}
-          options={{
-            drawerIcon: ({ color }) => (
-              <Ionicons name="home-outline" size={22} color={color} />
-            ),
-          }}
-        />
+
         <Menu.Screen
           name="Crear reporte"
           component={CreateUserScreen}
@@ -75,7 +67,6 @@ export default function App() {
             headerTitle: "Crear Actas",
           }}
         />
-
         <Menu.Screen
           name="Mapa"
           component={Map}
@@ -86,17 +77,10 @@ export default function App() {
             headerTitle: "Mapa",
           }}
         />
-        {/* <Menu.Screen
-          name="Grafica"
-          component={Charts}
-          options={{
-            drawerIcon: ({ color }) => (
-              <Ionicons name="map-outline" size={22} color={color} />
-            ),
-            headerTitle: "Mapa",
-          }}
-        />  */}
+      
       </Menu.Navigator>
+
+      {/* this use for change status bar color  */}
       <StatusBar style="light" />
     </NavigationContainer>
   );
