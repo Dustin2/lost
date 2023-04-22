@@ -23,44 +23,39 @@ import {
 } from "firebase/firestore";
 
 //import React Native chart Kit for different kind of Chart
-import {
-  LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart,
-} from "react-native-chart-kit";
+import { LineChart } from "react-native-chart-kit";
 
-function mostFrequentWord(arr, n) {
-  // freq to store the freq of the most occurring variable
-  let freq = 0;
+import { LinearGradient } from "expo-linear-gradient";
 
-  // res to store the most occurring string in the array of
-  // strings
-  let res = "";
+// function mostFrequentWord(arr, n) {
+//   // freq to store the freq of the most occurring variable
+//   let freq = 0;
 
-  // running nested for loops to find the most occurring
-  // word in the array of strings
-  for (let i = 0; i < n; i++) {
-    let count = 0;
-    for (let j = i + 1; j < n; j++) {
-      if (JSON.stringify(arr[j]) === JSON.stringify(arr[i])) {
-        count++;
-      }
-    }
+//   // res to store the most occurring string in the array of
+//   // strings
+//   let res = "";
 
-    // updating our max freq of occurred string in the
-    // array of strings
-    if (count >= freq) {
-      res = arr[i];
-      freq = count;
-    }
-  }
+//   // running nested for loops to find the most occurring
+//   // word in the array of strings
+//   for (let i = 0; i < n; i++) {
+//     let count = 0;
+//     for (let j = i + 1; j < n; j++) {
+//       if (JSON.stringify(arr[j]) === JSON.stringify(arr[i])) {
+//         count++;
+//       }
+//     }
 
-  console.log("The word that occurs most is : " + res + "<br>");
-  console.log("No of times: " + freq);
-}
+//     // updating our max freq of occurred string in the
+//     // array of strings
+//     if (count >= freq) {
+//       res = arr[i];
+//       freq = count;
+//     }
+//   }
+
+//   console.log("The word that occurs most is : " + res + "<br>");
+//   console.log("No of times: " + freq);
+// }
 
 // given set of keys
 let arr = [
@@ -87,25 +82,45 @@ let arr = [
 
 // mostFrequentWord(arr, n);
 const location = [];
-// This code is contributed by lokesh.
-const MyBarChart = () => {
+const data = {
+  labels: ["January", "February", "March", "April", "May", "June"],
+  datasets: [
+    {
+      data: [20, 45, 28, 80, 99, 43],
+    },
+  ],
+};
+
+const state = {
+  mapRegion: {
+    latitude: 37.78825,
+    longitude: -122.4324,
+    latitudeDelta: 0.0922,
+    longitudeDelta: 0.0421,
+  },
+};
+const HeadmapMarker = () => (
+  <LinearGradient
+    colors={["#4c669f", "#3b5998", "#192f6a"]}
+    style={{ padding: 15, alignItems: "center", borderRadius: 5 }}
+  />
+);
+const MyLineChart = () => {
   return (
     <>
-      <Text style={styles.header}>robos por mes</Text>
-      {/* <BarChart
+      <Text style={styles.header}>Line Chart</Text>
+      <LineChart
         data={{
-          labels: location.colony,
+          labels: ["January", "February", "March", "April", "May", "June"],
           datasets: [
             {
-              data: [
-                3000000, 453000000, 283000000, 803000000, 993000000, 433000000,
-              ],
+              data: [20, 45, 28, 80, 99, 43],
+              strokeWidth: 2,
             },
           ],
         }}
         width={Dimensions.get("window").width - 16}
         height={220}
-        yAxisLabel={"Rs"}
         chartConfig={{
           backgroundColor: "#1cc910",
           backgroundGradientFrom: "#eff3ff",
@@ -120,20 +135,10 @@ const MyBarChart = () => {
           marginVertical: 8,
           borderRadius: 16,
         }}
-      /> */}
-      <BarChart
-        style={graphStyle}
-        data={data}
-        width={screenWidth}
-        height={220}
-        yAxisLabel="$"
-        chartConfig={chartConfig}
-        verticalLabelRotation={30}
       />
     </>
   );
 };
-
 const Test = () => {
   const [acta, setActa] = useState([]);
   const [repeat, setRepeat] = useState([]);
@@ -184,12 +189,9 @@ const Test = () => {
       <ScrollView>
         <View style={styles.container}>
           <View>
-            {/*Example of Bezier LineChart*/}
-
-            {/*Example of Bar Chart*/}
-            <MyBarChart />
+            <MyLineChart />
           </View>
-          {console.log(location.colony)}
+          {/* {console.log(location.colony)} */}
         </View>
       </ScrollView>
     </SafeAreaView>
