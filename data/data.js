@@ -363,25 +363,26 @@ export const stolenCars = [
         count: 17,
       },
     ],
-    complaints:[
+    complaints: [
       {
-       complaints:"NO",
-       count:15 
-      }, {
-        complaints:"SI",
-        count:43 
-       }
-    ],
-    arrest:[
-      {
-        arrest:"NO",
-        count:56
+        complaints: "NO",
+        count: 15,
       },
       {
-        arrest:"SI",
-        count:2
-      }
-    ]
+        complaints: "SI",
+        count: 43,
+      },
+    ],
+    arrest: [
+      {
+        arrest: "NO",
+        count: 56,
+      },
+      {
+        arrest: "SI",
+        count: 2,
+      },
+    ],
   },
   {
     year: "2020",
@@ -747,25 +748,26 @@ export const stolenCars = [
         count: 17,
       },
     ],
-    complaints:[
+    complaints: [
       {
-       complaints:"NO",
-       count:15 
-      }, {
-        complaints:"SI",
-        count:43 
-       }
-    ],
-    arrest:[
-      {
-        arrest:"NO",
-        count:56
+        complaints: "NO",
+        count: 15,
       },
       {
-        arrest:"SI",
-        count:2
-      }
-    ]
+        complaints: "SI",
+        count: 43,
+      },
+    ],
+    arrest: [
+      {
+        arrest: "NO",
+        count: 56,
+      },
+      {
+        arrest: "SI",
+        count: 2,
+      },
+    ],
   },
   {
     year: "2021",
@@ -1131,25 +1133,26 @@ export const stolenCars = [
         count: 17,
       },
     ],
-    complaints:[
+    complaints: [
       {
-       complaints:"NO",
-       count:15 
-      }, {
-        complaints:"SI",
-        count:43 
-       }
-    ],
-    arrest:[
-      {
-        arrest:"NO",
-        count:56
+        complaints: "NO",
+        count: 15,
       },
       {
-        arrest:"SI",
-        count:2
-      }
-    ]
+        complaints: "SI",
+        count: 43,
+      },
+    ],
+    arrest: [
+      {
+        arrest: "NO",
+        count: 56,
+      },
+      {
+        arrest: "SI",
+        count: 2,
+      },
+    ],
   },
   {
     year: "2022",
@@ -1515,52 +1518,32 @@ export const stolenCars = [
         count: 17,
       },
     ],
-    complaints:[
+    complaints: [
       {
-       complaints:"NO",
-       count:15 
-      }, {
-        complaints:"SI",
-        count:43 
-       }
-    ],
-    arrest:[
-      {
-        arrest:"NO",
-        count:56
+        complaints: "NO",
+        count: 15,
       },
       {
-        arrest:"SI",
-        count:2
-      }
-    ]
+        complaints: "SI",
+        count: 43,
+      },
+    ],
+    arrest: [
+      {
+        arrest: "NO",
+        count: 56,
+      },
+      {
+        arrest: "SI",
+        count: 2,
+      },
+    ],
   },
 ];
 
 export const repossessedCars = [
   {
     year: "2019",
-    coordinates: {
-      lat: 37.7833,
-      lng: -122.4167,
-    },
-  },
-  {
-    year: "2020",
-    coordinates: {
-      lat: 37.7833,
-      lng: -122.4167,
-    },
-  },
-  {
-    year: "2021",
-    coordinates: {
-      lat: 37.7833,
-      lng: -122.4167,
-    },
-  },
-  {
-    year: "2022",
     coordinates: {
       lat: 37.7833,
       lng: -122.4167,
