@@ -1,36 +1,17 @@
 export const stolenCars = [
   {
     year: "2019",
+
     daysPerWeek: [
-      {
-        day: "Domingo",
-        count: 6,
-      },
-      {
-        day: "Lunes",
-        count: 6,
-      },
-      {
-        day: "Martes",
-        count: 14,
-      },
-      {
-        day: "Miercoles",
-        count: 7,
-      },
-      {
-        day: "Jueves",
-        count: 13,
-      },
-      {
-        day: "Viernes",
-        count: 5,
-      },
-      {
-        day: "Sabado",
-        count: 7,
-      },
+      "Domingo",
+      "Lunes",
+      "Martes",
+      "Miércoles",
+      "Jueves",
+      "Viernes",
+      "Sábado",
     ],
+
     monthPeryear: [
       {
         month: "Octubre",
@@ -1380,102 +1361,107 @@ export const stolenCars = [
     colony: [
       {
         colonyName: "CENTRO",
-        count: 68,
+        count: 96,
       },
       {
         colonyName: "LOMAS DE CIRCUNVALACION",
-        count: 19,
+        count: 12,
       },
       {
         colonyName: "JARDIES VISTA HERMOSA",
-        count: 14,
+        count: 16,
       },
       {
         colonyName: "LOMAS VISTA HERMOSA",
-        count: 8,
+        count: 14,
       },
+      {
+        colonyName: "EL MORALETE",
+        count: 11,
+      },
+      ,
       {
         colonyName: "INFONAVIT ESTANCIA",
         count: 7,
       },
       {
         colonyName: "GUADALAJARITA",
+        count: 14,
+      },
+      {
+        colonyName: "EL TIVOLI",
+        count: 7,
+      },
+      {
+        colonyName: "FRANCISCO VILLA",
+        count: 6,
+      },
+      {
+        colonyName: "FATIMA",
         count: 6,
       },
       {
         colonyName: "PLACETAS ESTADIO",
-        count: 4,
+        count: 6,
+      },
+      {
+        colonyName: "INFONAVIT CAMINO REAL",
+        count: 6,
+      },
+      {
+        colonyName: "FOVISSTE",
+        count: 5,
+      },
+      {
+        colonyName: "ALBARRADA",
+        count: 5,
       },
       {
         colonyName: "ORIENTAL",
-        count: 4,
+        count: 5,
+      },
+      {
+        colonyName: "LAS HACIENDAS",
+        count: 5,
+      },
+      {
+        colonyName: "VILLA SAN SEBASTIAN",
+        count: 5,
+      },
+      {
+        colonyName: " BOSQUES DEL SUR",
+        count: 5,
+      },
+      {
+        colonyName: "HILDALGO",
+        count: 5,
       },
       {
         colonyName: "EL PORVENIR",
-        count: 4,
-      },
-      {
-        colonyName: "RESIDENCIAL PRADOS DEL SUR",
-        count: 4,
-      },
-      {
-        colonyName: "JARDINES DE LA CORREJIDORA",
-        count: 4,
-      },
-      {
-        colonyName: "JARDINES DE LAS LOMAS",
-        count: 3,
-      },
-      {
-        colonyName: "BUROCRATAS",
-        count: 3,
-      },
-      {
-        colonyName: "GREGORIO TORRES QUINTERO",
-        count: 3,
-      },
-      {
-        colonyName: "RESIDENCIAL ESMERALDA NORTE",
-        count: 3,
-      },
-      {
-        colonyName: "IGNACIO ZARAGOZA",
-        count: 3,
-      },
-      {
-        colonyName: "VILLAS DEL BOSQUE",
-        count: 3,
-      },
-      {
-        colonyName: "NUEVO MILENIO",
-        count: 3,
-      },
-      {
-        colonyName: "GIRASOLES",
-        count: 3,
+        count: 8,
       },
     ],
     sector: [
       [
         {
           sectorNumber: "0",
-          count: 74,
+          count: 99,
         },
         {
           sectorNumber: "1",
-          count: 66,
+          count: 83,
         },
         {
           sectorNumber: "2",
-          count: 26,
+          count: 62,
         },
         {
           sectorNumber: "3",
-          count: 22,
+          count: 55,
         },
         {
           sectorNumber: "4",
-          count: 28,
+          count: 47,
         },
         {
           sectorNumber: "SS",
@@ -1486,11 +1472,11 @@ export const stolenCars = [
     zone: [
       {
         zone: "CENTRO",
-        count: 74,
+        count: 99,
       },
       {
         zone: "NORTE",
-        count: 92,
+        count: 145,
       },
       {
         zone: "RURAL",
@@ -1498,70 +1484,849 @@ export const stolenCars = [
       },
       {
         zone: "SUR",
-        count: 50,
+        count: 102,
       },
     ],
     complaints: [
       {
         complaints: "NO",
-        count: 23,
+        count: 9,
       },
       {
         complaints: "SI",
-        count: 195,
+        count: 339,
       },
     ],
     arrest: [
       {
         arrest: "NO",
-        count: 212,
-      },
-      {
-        arrest: "SI",
-        count: 6,
+        count: 348,
       },
     ],
     crime: [
       {
         crime: "ROBO DE AUTOMOVIL",
-        count: 135,
+        count: 187,
       },
       {
         crime: "ROBO DE CAMIONETA",
-        count: 44,
+        count: 64,
       },
       {
         crime: "ROBO DE MOTOCICLETA",
-        count: 33,
-      },
-      {
-        crime: "ROBO DE VEHICULO",
-        count: 6,
+        count: 97,
       },
     ],
     brand: [
       {
+        brand: "GMC",
+        count: 1,
+      },
+      {
+        brand: "SATURN",
+        count: 1,
+      },
+      {
+        brand: "CARABELA",
+        count: 1,
+      },
+      {
+        brand: "SUZUKI",
+        count: 1,
+      },
+      {
+        brand: "MERCURY",
+        count: 1,
+      },
+      {
+        brand: "ISLO",
+        count: 1,
+      },
+      {
+        brand: "CAMIONETA",
+        count: 1,
+      },
+      {
+        brand: "TSURU",
+        count: 1,
+      },
+      {
+        brand: "VOYAGER",
+        count: 1,
+      },
+      {
+        brand: "GUAYIN",
+        count: 1,
+      },
+      {
+        brand: "POLUX",
+        count: 1,
+      },
+      {
+        brand: "ALESSIA",
+        count: 1,
+      },
+      {
+        brand: "BUICK",
+        count: 1,
+      },
+      {
+        brand: "MOTOCICLETA",
+        count: 1,
+      },
+      {
+        brand: "INTERNATIONAL",
+        count: 1,
+      },
+      {
+        brand: "TANK",
+        count: 1,
+      },
+      {
+        brand: "PULSAR",
+        count: 2,
+      },
+      {
+        brand: "MB",
+        count: 2,
+      },
+      {
+        brand: "CHRYSLER",
+        count: 2,
+      },
+      {
         brand: "N/A",
+        count: 2,
+      },
+      {
+        brand: "KEEWAY",
+        count: 2,
+      },
+      {
+        brand: "MAZDA",
+        count: 3,
+      },
+      {
+        brand: "VENTO",
+        count: 3,
+      },
+      {
+        brand: "YAMAHA",
         count: 4,
       },
       {
+        brand: "VELOCI",
+        count: 4,
+      },
+      {
+        brand: "BDS",
+        count: 5,
+      },
+      {
+        brand: "FORD",
+        count: 7,
+      },
+      {
+        brand: "BAJAJ",
+        count: 7,
+      },
+      {
+        brand: "SIN INFORMACION",
+        count: 7,
+      },
+      {
+        brand: "JEEP",
+        count: 8,
+      },
+      {
+        brand: "DODGE",
+        count: 8,
+      },
+      {
+        brand: "TAXI",
+        count: 10,
+      },
+      {
+        brand: "DATSUN",
+        count: 13,
+      },
+      {
+        brand: "TOYOTA",
+        count: 16,
+      },
+      {
         brand: "VW",
-        count: 1,
+        count: 21,
+      },
+      {
+        brand: "CHEVROLET",
+        count: 29,
+      },
+      {
+        brand: "HONDA",
+        count: 33,
+      },
+      {
+        brand: "ITALIKA",
+        count: 36,
       },
       {
         brand: "NISSAN",
+        count: 108,
+      },
+    ],
+  },
+  {
+    year: "2022",
+    daysPerWeek: [
+      {
+        day: "Domingo",
+        count: 33,
+      },
+      {
+        day: "Lunes",
+        count: 24,
+      },
+      {
+        day: "Martes",
+        count: 28,
+      },
+      {
+        day: "Miercoles",
+        count: 26,
+      },
+      {
+        day: "Jueves",
+        count: 21,
+      },
+      {
+        day: "Viernes",
+        count: 23,
+      },
+      {
+        day: "Sabado",
+        count: 36,
+      },
+    ],
+    monthPeryear: [
+      {
+        month: "Enero",
+        count: 40,
+      },
+      {
+        month: "Febrero",
+        count: 20,
+      },
+      {
+        month: "Marzo",
+        count: 12,
+      },
+      {
+        month: "Abril",
+        count: 22,
+      },
+      {
+        month: "Mayo",
+        count: 18,
+      },
+      {
+        month: "Junio",
+        count: 22,
+      },
+      {
+        month: "Julio",
+        count: 14,
+      },
+      {
+        month: "Agosto",
+        count: 17,
+      },
+      {
+        month: "Septiembre",
+        count: 18,
+      },
+      {
+        month: "Octubre",
+        count: 8,
+      },
+    ],
+    schedule: [
+      {
+        time: "Madrugada",
+        count: 12,
+      },
+      {
+        time: "Mañana",
+        count: 72,
+      },
+      {
+        time: "Tarde",
+        count: 42,
+      },
+      {
+        time: "Noche",
+        count: 65,
+      },
+    ],
+    annualWeek: [
+      {
+        numberOfWeek: "2",
+        count: 16,
+      },
+      {
+        numberOfWeek: "3",
+        count: 9,
+      },
+      {
+        numberOfWeek: "4",
+        count: 3,
+      },
+      {
+        numberOfWeek: "5",
+        count: 8,
+      },
+      {
+        numberOfWeek: "6",
+        count: 8,
+      },
+      {
+        numberOfWeek: "7",
+        count: 9,
+      },
+      {
+        numberOfWeek: "8",
+        count: 4,
+      },
+      {
+        numberOfWeek: "9",
         count: 1,
+      },
+      {
+        numberOfWeek: "10",
+        count: 5,
+      },
+      {
+        numberOfWeek: "12",
+        count: 1,
+      },
+      {
+        numberOfWeek: "13",
+        count: 3,
+      },
+      {
+        numberOfWeek: "14",
+        count: 5,
+      },
+      {
+        numberOfWeek: "15",
+        count: 2,
+      },
+      {
+        numberOfWeek: "16",
+        count: 8,
+      },
+      {
+        numberOfWeek: "17",
+        count: 2,
+      },
+      {
+        numberOfWeek: "18",
+        count: 10,
+      },
+      {
+        numberOfWeek: "19",
+        count: 2,
+      },
+      {
+        numberOfWeek: "20",
+        count: 5,
+      },
+      {
+        numberOfWeek: "21",
+        count: 6,
+      },
+      {
+        numberOfWeek: "22",
+        count: 3,
+      },
+      {
+        numberOfWeek: "23",
+        count: 5,
+      },
+      {
+        numberOfWeek: "24",
+        count: 6,
+      },
+      {
+        numberOfWeek: "25",
+        count: 4,
+      },
+      {
+        numberOfWeek: "26",
+        count: 8,
+      },
+      {
+        numberOfWeek: "27",
+        count: 1,
+      },
+      {
+        numberOfWeek: "28",
+        count: 4,
+      },
+      {
+        numberOfWeek: "29",
+        count: 4,
+      },
+      {
+        numberOfWeek: "30",
+        count: 3,
+      },
+      {
+        numberOfWeek: "31",
+        count: 2,
+      },
+      {
+        numberOfWeek: "32",
+        count: 3,
+      },
+      {
+        numberOfWeek: "33",
+        count: 7,
+      },
+      {
+        numberOfWeek: "34",
+        count: 5,
+      },
+      {
+        numberOfWeek: "35",
+        count: 3,
+      },
+      {
+        numberOfWeek: "36",
+        count: 1,
+      },
+      {
+        numberOfWeek: "37",
+        count: 4,
+      },
+      {
+        numberOfWeek: "38",
+        count: 6,
+      },
+      {
+        numberOfWeek: "39",
+        count: 3,
+      },
+      {
+        numberOfWeek: "40",
+        count: 6,
+      },
+      {
+        numberOfWeek: "41",
+        count: 6,
+      },
+    ],
+    timeOfTheDay: [
+      {
+        hour: "0",
+        count: 3,
+      },
+      {
+        hour: "1",
+        count: 2,
+      },
+      {
+        hour: "2",
+        count: 2,
+      },
+      {
+        hour: "3",
+        count: 1,
+      },
+      {
+        hour: "4",
+        count: 2,
+      },
+      {
+        hour: "5",
+        count: 2,
+      },
+      {
+        hour: "6",
+        count: 10,
+      },
+      {
+        hour: "7",
+        count: 18,
+      },
+      {
+        hour: "8",
+        count: 13,
+      },
+      {
+        hour: "9",
+        count: 12,
+      },
+      {
+        hour: "10",
+        count: 10,
+      },
+      {
+        hour: "11",
+        count: 9,
+      },
+      {
+        hour: "12",
+        count: 11,
+      },
+      {
+        hour: "13",
+        count: 7,
+      },
+      {
+        hour: "14",
+        count: 6,
+      },
+      {
+        hour: "15",
+        count: 4,
+      },
+      {
+        hour: "16",
+        count: 10,
+      },
+      {
+        hour: "17",
+        count: 4,
+      },
+      {
+        hour: "18",
+        count: 7,
+      },
+      {
+        hour: "19",
+        count: 12,
+      },
+      {
+        hour: "20",
+        count: 19,
+      },
+      {
+        hour: "21",
+        count: 10,
+      },
+      {
+        hour: "22",
+        count: 7,
+      },
+      {
+        hour: "23",
+        count: 10,
+      },
+    ],
+    colony: [
+      {
+        colonyName: "CENTRO",
+        count: 61,
+      },
+      {
+        colonyName: "LOMAS DE CIRCUNVALACION",
+        count: 7,
+      },
+      {
+        colonyName: "JARDIES VISTA HERMOSA",
+        count: 9,
+      },
+      {
+        colonyName: "FATIMA",
+        count: 7,
+      },
+      {
+        colonyName: "INFONAVIT LA ESTANCIA",
+        count: 5,
+      },
+      {
+        colonyName: "LAZARO CARDENAS",
+        count: 4,
+      },
+      {
+        colonyName: "NIÑOS HÉROES",
+        count: 3,
+      },
+      {
+        colonyName: "LO DE VILLA",
+        count: 3,
+      },
+      {
+        colonyName: "ALBARRADA",
+        count: 3,
+      },
+      {
+        colonyName: "SAN PABLO",
+        count: 3,
+      },
+      {
+        colonyName: "LOMAS VISTA HERMOSA",
+        count: 3,
+      },
+      {
+        colonyName: "INFONAVIT ESTANCIA",
+        count: 5,
+      },
+      {
+        colonyName: "VILLA SAN SEBASTIAN",
+        count: 3,
+      },
+      {
+        colonyName: "LA ESTANCIA",
+        count: 3,
+      },
+      {
+        colonyName: "ORIENTAL",
+        count: 4,
+      },
+      {
+        colonyName: "EL PORVENIR",
+        count: 8,
+      },
+
+      {
+        colonyName: "JARDINES DE LA CORREJIDORA",
+        count: 5,
+      },
+    ],
+    sector: [
+      [
+        {
+          sectorNumber: "0",
+          count: 67,
+        },
+        {
+          sectorNumber: "1",
+          count: 40,
+        },
+        {
+          sectorNumber: "2",
+          count: 36,
+        },
+        {
+          sectorNumber: "3",
+          count: 17,
+        },
+        {
+          sectorNumber: "4",
+          count: 30,
+        },
+        {
+          sectorNumber: "SS",
+          count: 1,
+        },
+      ],
+    ],
+    zone: [
+      {
+        zone: "CENTRO",
+        count: 67,
+      },
+      {
+        zone: "NORTE",
+        count: 76,
+      },
+      {
+        zone: "RURAL",
+        count: 1,
+      },
+      {
+        zone: "SUR",
+        count: 47,
+      },
+    ],
+    complaints: [
+      {
+        complaints: "NO",
+        count: 10,
+      },
+      {
+        complaints: "SI",
+        count: 181,
+      },
+    ],
+    arrest: [
+      {
+        arrest: "NO",
+        count: 191,
+      },
+    ],
+    crime: [
+      {
+        crime: "ROBO DE AUTOMOVIL",
+        count: 100,
+      },
+      {
+        crime: "ROBO DE CAMIONETA",
+        count: 32,
+      },
+      {
+        crime: "ROBO DE MOTOCICLETA",
+        count: 59,
+      },
+    ],
+    brand: [
+      {
+        brand: "KIA",
+        count: 1,
+      },
+      {
+        brand: "MOTOCICLETA",
+        count: 1,
+      },
+      {
+        brand: "GM",
+        count: 1,
+      },
+      {
+        brand: "MITSUBISHI",
+        count: 1,
+      },
+      {
+        brand: "ISUZU",
+        count: 1,
+      },
+      {
+        brand: "MB",
+        count: 1,
+      },
+      {
+        brand: "RENAULT",
+        count: 1,
+      },
+      {
+        brand: "DOGGE",
+        count: 1,
+      },
+      {
+        brand: "HYUNDAY",
+        count: 1,
+      },
+      {
+        brand: "MERCURY",
+        count: 1,
+      },
+      {
+        brand: "YUKON",
+        count: 1,
+      },
+      {
+        brand: "BMW",
+        count: 1,
+      },
+      {
+        brand: "KURAZAI",
+        count: 2,
+      },
+      {
+        brand: "CHRYSLER",
+        count: 2,
+      },
+      {
+        brand: "BDS",
+        count: 3,
+      },
+      {
+        brand: "SUZUKI",
+        count: 3,
+      },
+      {
+        brand: "SIN INFORMACION",
+        count: 3,
+      },
+      {
+        brand: "GMC",
+        count: 3,
+      },
+      {
+        brand: "VELOCI",
+        count: 3,
+      },
+      {
+        brand: "VENTO",
+        count: 4,
+      },
+      {
+        brand: "FORD",
+        count: 4,
+      },
+      {
+        brand: "DODGE",
+        count: 4,
+      },
+      {
+        brand: "BAJAJ",
+        count: 5,
+      },
+      {
+        brand: "YAMAHA",
+        count: 5,
+      },
+      {
+        brand: "MAZDA",
+        count: 5,
+      },
+      {
+        brand: "TOYOTA",
+        count: 5,
+      },
+      {
+        brand: "TAXI",
+        count: 9,
+      },
+      {
+        brand: "VW",
+        count: 14,
+      },
+      {
+        brand: "ITALIKA",
+        count: 15,
+      },
+      {
+        brand: "HONDA",
+        count: 20,
+      },
+      {
+        brand: "CHEVROLET",
+        count: 21,
+      },
+      {
+        brand: "NISSAN",
+        count: 49,
       },
     ],
   },
 ];
 
-export const repossessedCars = [
-  {
-    year: "2019",
-    coordinates: {
-      lat: 37.7833,
-      lng: -122.4167,
-    },
-  },
+export const daysPerWeek = [
+  "Domingo",
+  "Lunes",
+  "Martes",
+  "Miercoles",
+  "Jueves",
+  "Viernes",
+  "Sabado",
 ];
+
+export const monthPeryear = {
+  labels: [
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miercoles",
+    "Jueves",
+    "Viernes",
+    "Sabado",
+  ],
+  datasets: [
+    {
+      data: [6, 6, 4, 7, 3, 5, 7],
+    },
+  ],
+};

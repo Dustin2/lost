@@ -31,7 +31,7 @@ const initialState = {
   color: "",
   description: "",
   selectedDate: "",
-  colorAvatar : ""
+  colorAvatar: "",
 };
 ///
 const generateColor = () => {
@@ -186,13 +186,9 @@ export function CreateUserScreen(props) {
           onValueChange={(colonySel, indexColony, name, value) =>
             updatePickerColony(colonySel, indexColony, name, value)
           }
+          prompt="Selecciona la colonia"
         >
-          <Picker.Item label="Selecciona la colonia" color="#aaa" />
           {places.map((place) => {
-            // {
-            //   user.place = place.NameOfLocation;
-            //   console.log(user.place)
-            // }
             return (
               <Picker.Item
                 key={place.place}
@@ -211,19 +207,15 @@ export function CreateUserScreen(props) {
           onValueChange={(vehicleSel, indexVehicle, name, value) =>
             updatePickerColony1(vehicleSel, indexVehicle, name, value)
           }
+          prompt="Selecciona el tipo de vehiculo"
         >
-          <Picker.Item
-            label="Selecciona el vehiculo"
-            value="disabled"
-            color="#aaa"
-          />
           <Picker.Item label="Automovil" value="Automovil" />
           <Picker.Item label="camioneta" value="camioneta" />
           <Picker.Item label="motocicleta" value="motocicleta" />
         </Picker>
       </View>
 
-      <View>
+      {/* <View>
         <Picker
           value={user.color}
           selectedValue={selectedColor}
@@ -240,7 +232,7 @@ export function CreateUserScreen(props) {
           <Picker.Item label="azul" value="azul" />
           <Picker.Item label="rojo" value="rojo" />
         </Picker>
-      </View>
+      </View> */}
       {/* plaque Input */}
       <View>
         <TextInput
@@ -286,7 +278,6 @@ export function CreateUserScreen(props) {
           title={"Guardar"}
           onPress={() => {
             saveNewUser();
-            console.log(user);
           }}
         />
       </View>

@@ -1,14 +1,15 @@
+//dependencies
 import React, { useState, useEffect } from "react";
 
 // import all the components we are going to use
 import {
   SafeAreaView,
-  Text,
   View,
   StyleSheet,
   ScrollView,
   Dimensions,
 } from "react-native";
+
 //firebase
 import { database } from "../firebase/firebase";
 import {
@@ -21,127 +22,12 @@ import {
   doc,
 } from "firebase/firestore";
 
-//import React Native chart Kit for different kind of Chart
-import {
-  LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart,
-} from "react-native-chart-kit";
-
-const screenWidth = Dimensions.get("window").width;
-const location = [];
-
-const chartConfig = {
-  backgroundGradientFrom: "#1E2923",
-  backgroundGradientFromOpacity: 0,
-  backgroundGradientTo: "#08130D",
-  backgroundGradientToOpacity: 0.5,
-  color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
-  strokeWidth: 2, // optional, default 3
-  barPercentage: 0.5,
-  useShadowColorFromDataset: false, // optional
-};
-const data = {
-  labels: ["January", "February", "March", "April", "May", "June"],
-  datasets: [
-    {
-      data: [20, 45, 28, 80, 99, 43],
-    },
-  ],
-};
-
-const data1 = {
-  labels: ["January", "February", "March", "April", "May", "June"],
-  datasets: [
-    {
-      data: [20, 45, 28, 80, 99, 43],
-    },
-  ],
-};
-const state = {
-  mapRegion: {
-    latitude: 37.78825,
-    longitude: -122.4324,
-    latitudeDelta: 0.0922,
-    longitudeDelta: 0.0421,
-  },
-};
-
-const MyLineChart = () => {
-  return (
-    <>
-      <Text style={styles.header}>ACUMULADO GENERAL</Text>
-      <LineChart
-        data={{
-          labels: ["January", "February", "March", "April", "May", "June"],
-          datasets: [
-            {
-              data: [20, 45, 28, 80, 99, 43],
-              strokeWidth: 2,
-            },
-          ],
-        }}
-        width={Dimensions.get("window").width - 16}
-        height={220}
-        chartConfig={{
-          backgroundColor: "#1cc910",
-          backgroundGradientFrom: "#eff3ff",
-          backgroundGradientTo: "#efefef",
-          decimalPlaces: 2,
-          color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-          style: {
-            borderRadius: 16,
-          },
-        }}
-        style={{
-          marginVertical: 8,
-          borderRadius: 16,
-        }}
-      />
-    </>
-  );
-};
-
-const MyBarChart = () => {
-  return (
-    <>
-      <Text style={styles.header}>Bar Chart</Text>
-      <BarChart
-        data={{
-          labels: ["January", "February", "March", "April", "May", "June"],
-          datasets: [
-            {
-              data: [20, 45, 28, 80, 99, 43],
-            },
-          ],
-        }}
-        width={Dimensions.get("window").width - 16}
-        height={220}
-        yAxisLabel={"Rs"}
-        chartConfig={{
-          backgroundColor: "#1cc910",
-          backgroundGradientFrom: "#eff3ff",
-          backgroundGradientTo: "#efefef",
-          decimalPlaces: 2,
-          color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-          style: {
-            borderRadius: 16,
-          },
-        }}
-        style={{
-          marginVertical: 8,
-          borderRadius: 16,
-        }}
-      />
-    </>
-  );
-};
+//components
+import Charts from "../components/charts/Charts";
+import MyPicker from "../components/picker/Picker";
 const Test = () => {
-  const [acta, setActa] = useState([]);
-  const [repeat, setRepeat] = useState([]);
+  // const [acta, setActa] = useState([]);
+  // const [repeat, setRepeat] = useState([]);
 
   // useEffect(() => {
   //   const collectionRef = collection(database, "actas");
@@ -189,19 +75,8 @@ const Test = () => {
       <ScrollView>
         <View style={styles.container}>
           <View>
-            <MyLineChart />
+            <Charts />
           </View>
-          <MyBarChart />
-          <MyBarChart />
-          <MyBarChart />
-          <MyBarChart />
-          <MyBarChart />
-          <MyBarChart />
-          <MyBarChart />
-          <MyBarChart />
-          <MyBarChart />
-          <MyBarChart />
-          <MyBarChart />
         </View>
       </ScrollView>
     </SafeAreaView>

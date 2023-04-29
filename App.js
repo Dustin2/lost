@@ -14,7 +14,7 @@ import { Inicio } from "./screens/Inicio";
 import { CreateUserScreen } from "./screens/CreateUserScreen";
 import { Map } from "./screens/Map";
 
-import Test  from "./screens/test.js";
+import Test from "./screens/test.js";
 import CustomMenu from "./components/CustomMenu";
 //icons//
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -42,8 +42,8 @@ export default function App() {
         }}
       >
         <Menu.Screen
-          name="Reportes recientes"
-          component={Inicio}
+          name="Robos por año"
+          component={Test}
           options={{
             drawerIcon: ({ color }) => (
               <Ionicons name="home-outline" size={22} color={color} />
@@ -51,8 +51,8 @@ export default function App() {
           }}
         />
         <Menu.Screen
-          name="test"
-          component={Test}
+          name="Reportes recientes"
+          component={Inicio}
           options={{
             drawerIcon: ({ color }) => (
               <Ionicons name="home-outline" size={22} color={color} />
