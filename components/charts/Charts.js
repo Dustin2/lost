@@ -13,6 +13,7 @@ import {
 //componets
 import MyPicker from "../picker/Picker";
 import FisrtYear from "./FisrtYear";
+import SecondYear from "./SecondYear";
 const Charts = () => {
   return (
     <View>
@@ -21,7 +22,8 @@ const Charts = () => {
           <MyPicker />
         </View>
         <View>
-          <FisrtYear />
+          {/* <FisrtYear /> */}
+          <SecondYear/>
         </View>
       </SafeAreaView>
     </View>

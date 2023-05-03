@@ -1,6 +1,8 @@
 //Dependeces//
 import { StyleSheet } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { registerRootComponent } from 'expo';
+
 
 //navigation//
 import { createDrawerNavigator } from "@react-navigation/drawer";
@@ -101,7 +103,7 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
+registerRootComponent(App)
 const styles = StyleSheet.create({
   drawerContainer: {
     backgroundColor: "#6aa3b4",

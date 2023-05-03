@@ -28,7 +28,7 @@
     "moment": "^2.29.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.71.6",
+    "react-native": "0.71.7",
     "react-native-chart-kit": "^6.12.0",
     "react-native-elements": "^3.4.3",
     "react-native-gesture-handler": "~2.9.0",
@@ -40,7 +40,7 @@
     "react-native-screens": "~3.20.0",
     "react-native-svg": "13.4.0",
     "react-native-vector-icons": "^9.2.0",
-    "react-native-web": "^0.18.12",
+    "react-native-web": "~0.18.10",
     "yarn": "^1.22.19",
     "expo-linear-gradient": "~12.1.2"
   },

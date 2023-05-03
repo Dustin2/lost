@@ -2313,20 +2313,3 @@ export const daysPerWeek = [
   "Viernes",
   "Sabado",
 ];
-
-export const monthPeryear = {
-  labels: [
-    "Domingo",
-    "Lunes",
-    "Martes",
-    "Miercoles",
-    "Jueves",
-    "Viernes",
-    "Sabado",
-  ],
-  datasets: [
-    {
-      data: [6, 6, 4, 7, 3, 5, 7],
-    },
-  ],
-};
