@@ -11,19 +11,37 @@ import {
   Dimensions,
 } from "react-native";
 //componets
-import MyPicker from "../picker/Picker";
+import { Picker } from "@react-native-picker/picker";
 import FisrtYear from "./FisrtYear";
 import SecondYear from "./SecondYear";
-const Charts = () => {
+import ThirdYear from "./ThirdYear";
+import FourthYear from "./FourthYear";
+const Charts = (props) => {
+  const [selectedItem, setSelectedItem] = useState("opcion1");
   return (
     <View>
       <SafeAreaView style={styles.container}>
         <View>
-          <MyPicker />
+          <Text>SELECCIONA EL AÑO </Text>
+          <Picker
+            selectedValue={selectedItem}
+            onValueChange={(itemValue, itemIndex) => {
+              setSelectedItem(itemValue);
+            }}
+            prompt="selecciona el año"
+          >
+            <Picker.Item label="2019" value="2019" />
+            <Picker.Item label="2020" value="2020" />
+            <Picker.Item label="2021" value="2021" />
+            <Picker.Item label="2022" value="2022" />
+          </Picker>
+          {console.log(selectedItem)}
         </View>
         <View>
-          {/* <FisrtYear /> */}
-          <SecondYear/>
+          {selectedItem == "2019" && <FisrtYear />}
+          {selectedItem == "2020" && <SecondYear />}
+          {selectedItem == "2021" && <ThirdYear />}
+          {selectedItem == "2022" && <FourthYear />}
         </View>
       </SafeAreaView>
     </View>
