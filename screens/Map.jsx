@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MapView, { Marker, Callout } from "react-native-maps";
 import { StyleSheet, View, Dimensions, Text } from "react-native";
-// import { mapsConfig } from "../Maps/mapsConfigs";
-
+import { mapsConfig } from "../maps/mapsConfig";
 //firebase
 import { database } from "../firebase/firebase";
 import {
@@ -14,8 +13,6 @@ import {
   querySnapshot,
   doc,
 } from "firebase/firestore";
-
-
 
 export function Map() {
   const [acta, setActa] = useState([]);
@@ -46,8 +43,6 @@ export function Map() {
     return unsubscribe;
   }, []);
 
-  const [repeat, setRepeat] = useState([]);
-
   return (
     <View style={styles.container}>
       <MapView
@@ -58,19 +53,19 @@ export function Map() {
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
-        // customMapStyle={mapsConfig}
+        customMapStyle={mapsConfig}
       >
         {acta.map((actas) => {
           return (
-            <Marker
+            <Map.Marker
               key={actas.id}
               coordinate={actas.colony.place}
               pinColor="red"
             >
-              <Callout>
-                {/* <Text> Ultimo reporte {actas.name}</Text> */}
-              </Callout>
-            </Marker>
+              <Map.Callout>
+                <Text> Ultimo reporte {actas.name}</Text>
+              </Map.Callout>
+            </Map.Marker>
           );
         })}
       </MapView>

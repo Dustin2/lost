@@ -1,6 +1,7 @@
 //Dependeces//
 import { StyleSheet } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { registerRootComponent } from "expo";
 
 //navigation//
 import { createDrawerNavigator } from "@react-navigation/drawer";
@@ -13,11 +14,13 @@ import { Colors } from "./assets/colors";
 import { Inicio } from "./screens/Inicio";
 import { CreateUserScreen } from "./screens/CreateUserScreen";
 import { Map } from "./screens/Map";
-
-import Test  from "./screens/test.js";
+import ShowChartsRecu from "./screens/ShowCharts";
+import ShowCharts from "./screens/ShowCharts";
 import CustomMenu from "./components/CustomMenu";
 //icons//
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
 
 const Menu = createDrawerNavigator();
 
@@ -42,17 +45,30 @@ export default function App() {
         }}
       >
         <Menu.Screen
-          name="Reportes recientes"
-          component={Inicio}
+          name="Robos por año"
+          component={ShowCharts}
           options={{
             drawerIcon: ({ color }) => (
-              <Ionicons name="home-outline" size={22} color={color} />
+              <MaterialCommunityIcons
+                name="car-emergency"
+                size={22}
+                color={color}
+              />
             ),
           }}
         />
         <Menu.Screen
-          name="test"
-          component={Test}
+          name="autos recuperados"
+          component={ShowChartsRecu}
+          options={{
+            drawerIcon: ({ color }) => (
+              <MaterialIcons name="car-repair" size={22} color={color} />
+            ),
+          }}
+        />
+        <Menu.Screen
+          name="Reportes recientes"
+          component={Inicio}
           options={{
             drawerIcon: ({ color }) => (
               <Ionicons name="home-outline" size={22} color={color} />
@@ -101,7 +117,7 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
+registerRootComponent(App);
 const styles = StyleSheet.create({
   drawerContainer: {
     backgroundColor: "#6aa3b4",

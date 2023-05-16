@@ -31,7 +31,7 @@ export const places = [
     place: { latitude: 19.2590464, longitude: -103.7136634 },
   },
   {
-    NameOfLocation: "Burócratas Municipales",
+    NameOfLocation: "Burocratas Municipales",
     place: { latitude: 19.2740353, longitude: -103.7406108 },
   },
   //C
@@ -44,7 +44,7 @@ export const places = [
     place: { latitude: 19.2247316, longitude: -103.6574649 },
   },
   {
-    NameOfLocation: "Colima Centro",
+    NameOfLocation: " Centro",
     place: { latitude: 19.2400477, longitude: -103.7286077 },
   },
   {
@@ -159,11 +159,12 @@ export const places = [
   },
   //F
   {
-    NameOfLocation: "Fátima",
-    place: { latitude: 19.2506717, longitude: -103.7356447 },
+    NameOfLocation: "Fatima",
+    place: { latitude: 19.2507989, longitude: -103.7390597 },
   },
+
   {
-    NameOfLocation: "FOVISSSTE",
+    NameOfLocation: "FOVISSTE",
     place: { latitude: 19.2418726, longitude: -103.7076429 },
   },
   {
@@ -212,15 +213,15 @@ export const places = [
     place: { latitude: 19.2303309, longitude: -103.683441 },
   },
   {
-    NameOfLocation: "INDECO Albarrada",
+    NameOfLocation: " Albarrada",
     place: { latitude: 19.233366, longitude: -103.7392809 },
   },
   {
-    NameOfLocation: "INFONAVIT Camino Real",
+    NameOfLocation: "Infonavit Camino Real",
     place: { latitude: 19.2406296, longitude: -103.7050471 },
   },
   {
-    NameOfLocation: "INFONAVIT La Estancia",
+    NameOfLocation: "Infonavit  Estancia",
     place: { latitude: 19.2392622, longitude: -103.7085641 },
   },
   {
@@ -339,4 +340,405 @@ export const places = [
     NameOfLocation: "Las Fuentes",
     place: { latitude: 19.2373046, longitude: -103.7480324 },
   },
+  {
+    NameOfLocation: "Las Golondrinas",
+    place: { latitude: 19.2505027, longitude: -103.716295 },
+  },
+  {
+    NameOfLocation: "Las Guásimas (Las Borregas)",
+    place: { latitude: 19.1158155, longitude: -103.7252667 },
+  },
+  {
+    NameOfLocation: "Las Haciendas ",
+    place: { latitude: 19.2271142, longitude: -103.7108168 },
+  },
+  {
+    NameOfLocation: "Las Palmas",
+    place: { latitude: 19.2614877, longitude: -103.7180565 },
+  },
+  {
+    NameOfLocation: "Las Pérgolas",
+    place: { latitude: 19.2614688, longitude: -103.7039396 },
+  },
+  {
+    NameOfLocation: "Las Torres",
+    place: { latitude: 19.24634, longitude: -103.6923576 },
+  },
+  {
+    NameOfLocation: "Las Tunas",
+    place: { latitude: 18.9083999, longitude: -103.5531446 },
+  },
+  {
+    NameOfLocation: "Las Víboras",
+    place: { latitude: 19.2468068, longitude: -103.7053874 },
+  },
+  {
+    NameOfLocation: "La Tabaquera",
+    place: { latitude: 19.0271638, longitude: -103.6573944 },
+  },
+  {
+    NameOfLocation: "La Virgencita",
+    place: { latitude: 19.2381787, longitude: -103.6992342 },
+  },
+  {
+    NameOfLocation: "Lazaro Cardenas",
+    place: { latitude: 19.2418574, longitude: -103.6891003 },
+  },
+  {
+    NameOfLocation: "Leonardo B Gutiérrez",
+    place: { latitude: 19.2337449, longitude: -103.7087116 },
+  },
+  {
+    NameOfLocation: "Lo de Villa",
+    place: { latitude: 19.232222, longitude: -103.7680207 },
+  },
+  {
+    NameOfLocation: "Loma de Juárez",
+    place: { latitude: 19.1942628, longitude: -103.7483879 },
+  },
+  {
+    NameOfLocation: "Loma de Juárez (El Mezquite)",
+    place: { latitude: 19.1927453, longitude: -103.748941 },
+  },
+  {
+    NameOfLocation: "Lomas de Circunvalacion",
+    place: { latitude: 19.2501764, longitude: -103.7137127 },
+  },
+  {
+    NameOfLocation: "Lomas del Valle",
+    place: { latitude: 18.9242367, longitude: -103.8900219 },
+  },
+  {
+    NameOfLocation: "Lomas de Santa Elena",
+    place: { latitude: 19.2446509, longitude: -103.6858431 },
+  },
+  {
+    NameOfLocation: "Lomas Verdes",
+    place: { latitude: 19.2619279, longitude: -103.7122647 },
+  },
+  {
+    NameOfLocation: "Lomas Vista hermosa",
+    place: { latitude: 19.2542119, longitude: -103.7180565 },
+  },
+  {
+    NameOfLocation: "Los Ángeles",
+    place: { latitude: 19.2338132, longitude: -103.6992342 },
+  },
+  {
+    NameOfLocation: "Los Asmoles",
+    place: { latitude: 19.1230555, longitude: -103.7738888 },
+  },
+  {
+    NameOfLocation: "Los Jazmines",
+    place: { latitude: 19.2334087, longitude: -103.6895024 },
+  },
+  {
+    NameOfLocation: "Los Mezcales",
+    place: { latitude: 19.1597222, longitude: -103.7641666 },
+  },
+  {
+    NameOfLocation: "Los Ortices",
+    place: { latitude: 19.1119444, longitude: -103.7336111 },
+  },
+  {
+    NameOfLocation: "Los Pinos",
+    place: { latitude: 19.2476306, longitude: -103.6945291 },
+  },
+  {
+    NameOfLocation: "Los Sauces",
+    place: { latitude: 19.2131304, longitude: -103.7403227 },
+  },
+  {
+    NameOfLocation: "Los Tepames",
+    place: { latitude: 19.0938888, longitude: -103.6224999 },
+  },
+  {
+    NameOfLocation: "Los Viveros",
+    place: { latitude: 19.229989, longitude: -103.7256585 },
+  },
+  {
+    NameOfLocation: "Los Volcanes",
+    place: { latitude: 19.2207447, longitude: -103.7180565 },
+  },
+  {
+    NameOfLocation: "Luis Donaldo Colosio",
+    place: { latitude: 19.2437729, longitude: -103.6974246 },
+  },
+  {
+    NameOfLocation: "Magisterial",
+    place: { latitude: 19.2534413, longitude: -103.7281926 },
+  },
+  {
+    NameOfLocation: "Margaritas",
+    place: { latitude: 19.2814683, longitude: -103.742007 },
+  },
+  {
+    NameOfLocation: "Militar Lomas",
+    place: { latitude: 19.2452342, longitude: -103.7240868 },
+  },
+  {
+    NameOfLocation: "Mirador de La Cumbre",
+    place: { latitude: 19.2260841, longitude: -103.6956149 },
+  },
+  {
+    NameOfLocation: "Mirador de La Cumbre II",
+    place: { latitude: 19.2260841, longitude: -103.6956149 },
+  },
+  {
+    NameOfLocation: "Mirador de La Cumbre III",
+    place: { latitude: 19.2209362, longitude: -103.6963388 },
+  },
+  {
+    NameOfLocation: "Moctezuma",
+    place: { latitude: 19.2300584, longitude: -103.6959768 },
+  },
+  {
+    NameOfLocation: "Morelos",
+    place: { latitude: 19.2297249, longitude: -103.7695744 },
+  },
+  {
+    NameOfLocation: "Niños Heroes",
+    place: { latitude: 19.2578066, longitude: -103.7281926 },
+  },
+  {
+    NameOfLocation: "Nuevo Milenio",
+    place: { latitude: 19.2230784, longitude: -103.7064733 },
+  },
+  {
+    NameOfLocation: "Nuevo Paraíso",
+    place: { latitude: 19.2335936, longitude: -103.7021298 },
+  },
+  {
+    NameOfLocation: "Oriental",
+    place: { latitude: 19.2453448, longitude: -103.700682 },
+  },
+  {
+    NameOfLocation: "Pablo Silva García",
+    place: { latitude: 19.2447679, longitude: -103.6891003 },
+  },
+  {
+    NameOfLocation: "Paraíso",
+    place: { latitude: 18.8752777, longitude: -103.9919445 },
+  },
+  {
+    NameOfLocation: "Parajes del Sur",
+    place: { latitude: 19.2452342, longitude: -103.7240868 },
+  },
+  {
+    NameOfLocation: "Parque Industrial",
+    place: { latitude: 19.2365765, longitude: -103.7586057 },
+  },
+  {
+    NameOfLocation: "Parque Royal",
+    place: { latitude: 19.2639944, longitude: -103.709007 },
+  },
+  {
+    NameOfLocation: "Paseo de la Cantera",
+    place: { latitude: 19.2634868, longitude: -103.7061113 },
+  },
+  {
+    NameOfLocation: "Paseo de la Hacienda",
+    place: { latitude: 19.2439428, longitude: -103.7543239 },
+  },
+  {
+    NameOfLocation: "Paso del Zarco",
+    place: { latitude: 19.1702777, longitude: -103.5952777 },
+  },
+  {
+    NameOfLocation: "Piscila",
+    place: { latitude: 19.1588888, longitude: -103.7019444 },
+  },
+  {
+    NameOfLocation: "Placetas Estadio",
+    place: { latitude: 19.2460673, longitude: -103.7390537 },
+  },
+  {
+    NameOfLocation: "Popular",
+    place: { latitude: 19.2452342, longitude: -103.7240868 },
+  },
+  {
+    NameOfLocation: "Privada San Francisco",
+    place: { latitude: 19.2557399, longitude: -103.7314509 },
+  },
+  {
+    NameOfLocation: "Privada San Rafael",
+    place: { latitude: 19.2340327, longitude: -103.6963388 },
+  },
+  {
+    NameOfLocation: "Puerta de Anzar",
+    place: { latitude: 19.1136718, longitude: -103.5569308 },
+  },
+  {
+    NameOfLocation: "Puerta Paraíso",
+    place: { latitude: 19.259101, longitude: -103.6919956 },
+  },
+  {
+    NameOfLocation: "Quinta El Tívoli",
+    place: { latitude: 19.2255813, longitude: -103.7357953 },
+  },
+  {
+    NameOfLocation: "Real de Don Juan",
+    place: { latitude: 19.2452342, longitude: -103.7240868 },
+  },
+  {
+    NameOfLocation: "Real Vista Hermosa",
+    place: { latitude: 19.2567668, longitude: -103.7035776 },
+  },
+  {
+    NameOfLocation: "Real Vista Hermosa III",
+    place: { latitude: 19.2567668, longitude: -103.7035776 },
+  },
+  {
+    NameOfLocation: "Recidencial Esmeralda",
+    place: { latitude: 19.2742423, longitude: -103.7129887 },
+  },
+  {
+    NameOfLocation: "Residencial Esmeralda Norte",
+    place: { latitude: 19.2742423, longitude: -103.7129887 },
+  },
+  {
+    NameOfLocation: "Residencial Los Olivos",
+    place: { latitude: 19.2692528, longitude: -103.7068352 },
+  },
+  {
+    NameOfLocation: "Residencial Prados del Sur",
+    place: { latitude: 19.2362351, longitude: -103.7535364 },
+  },
+  {
+    NameOfLocation: "Residencial Puerta del Sol",
+    place: { latitude: 19.2666236, longitude: -103.7079211 },
+  },
+  {
+    NameOfLocation: "Residencial Real Santa Bárbara",
+    place: { latitude: 19.2823797, longitude: -103.7093355 },
+  },
+  {
+    NameOfLocation: "Residencial San Pablo",
+    place: { latitude: 19.1283595, longitude: -103.5423011 },
+  },
+  {
+    NameOfLocation: "Residencial Santa Bárbara",
+    place: { latitude: 19.2676387, longitude: -103.7137127 },
+  },
+  {
+    NameOfLocation: "Residencial Santa María",
+    place: { latitude: 18.995267, longitude: -103.8396315 },
+  },
+  {
+    NameOfLocation: "Residencial Victoria",
+    place: { latitude: 19.2376303, longitude: -103.7262252 },
+  },
+  {
+    NameOfLocation: "Revolución",
+    place: { latitude: 19.2416999, longitude: -103.6959768 },
+  },
+  {
+    NameOfLocation: "Rinconada de Pereyra",
+    place: { latitude: 19.2452342, longitude: -103.7240868 },
+  },
+  {
+    NameOfLocation: "Rinconada San Pablo",
+    place: { latitude: 19.2247186, longitude: -103.7184185 },
+  },
+  {
+    NameOfLocation: "Rincón del Bosque",
+    place: { latitude: 19.2556339, longitude: -103.7364288 },
+  },
+  {
+    NameOfLocation: "San Carlos",
+    place: { latitude: 19.2672261, longitude: -103.7430362 },
+  },
+  {
+    NameOfLocation: "San José Norte",
+    place: { latitude: 19.2432649, longitude: -103.6945291 },
+  },
+  {
+    NameOfLocation: "San José Sur",
+    place: { latitude: 19.2291113, longitude: -103.6988723 },
+  },
+  {
+    NameOfLocation: "San Rafael",
+    place: { latitude: 19.2340327, longitude: -103.6963388 },
+  },
+  {
+    NameOfLocation: "Santa Amalia",
+    place: { latitude: 19.2306833, longitude: -103.7021298 },
+  },
+  {
+    NameOfLocation: "Santa Elena",
+    place: { latitude: 19.2439818, longitude: -103.6874717 },
+  },
+  {
+    NameOfLocation: "Santa Gertrudis",
+    place: { latitude: 19.2275481, longitude: -103.7094808 },
+  },
+  {
+    NameOfLocation: "Santa Gertrudis",
+    place: { latitude: 19.2275481, longitude: -103.7094808 },
+  },
+  {
+    NameOfLocation: "Ticuizitán",
+    place: { latitude: 19.2452342, longitude: -103.7240868 },
+  },
+  {
+    NameOfLocation: "Tinajas",
+    place: { latitude: 19.0413887, longitude: -103.5847222 },
+  },
+  {
+    NameOfLocation: "Trapichillos",
+    place: { latitude: 19.2944505, longitude: -103.7816619 },
+  },
+  {
+    NameOfLocation: "Unidad Antorchista",
+    place: { latitude: 19.2498064, longitude: -103.6898241 },
+  },
+  {
+    NameOfLocation: "Valle Dorado",
+    place: { latitude: 19.0463858, longitude: -104.3282809 },
+  },
+  {
+    NameOfLocation: "Valle Real",
+    place: { latitude: 19.2417615, longitude: -103.7527374 },
+  },
+  {
+    NameOfLocation: "Vicente Guerrero",
+    place: { latitude: 19.2343618, longitude: -103.6919956 },
+  },
+  {
+    NameOfLocation: "Villa de los Pinos",
+    place: { latitude: 19.2426874, longitude: -103.6829479 },
+  },
+  {
+    NameOfLocation: "Villa los Prados",
+    place: { latitude: 19.2600481, longitude: -103.729854 },
+  },
+  {
+    NameOfLocation: "Villanova",
+    place: { latitude: 19.2452342, longitude: -103.7240868 },
+  },
+  {
+    NameOfLocation: "Villa San Sebastian",
+    place: { latitude: 19.2435697, longitude: -103.7050252 },
+  },
+  {
+    NameOfLocation: "Villas Colinas",
+    place: { latitude: 19.2661345, longitude: -103.7191425 },
+  },
+  {
+    NameOfLocation: "Villas del Bosque",
+    place: { latitude: 19.2423747, longitude: -103.7397778 },
+  },
+  {
+    NameOfLocation: "Villas del Sur",
+    place: { latitude: 19.2278092, longitude: -103.7447347 },
+  },
+  {
+    NameOfLocation: "Villas Primaveras",
+    place: { latitude: 19.2452342, longitude: -103.7240868 },
+  },
+  {
+    NameOfLocation: "Villa Verde",
+    place: { latitude: 19.2452342, longitude: -103.7240868 },
+  },
+  { NameOfLocation: "Villas san jose",place:{latitude:19.2487677,longitude:-103.7513639}},
 ];

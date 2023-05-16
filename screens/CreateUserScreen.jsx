@@ -6,6 +6,7 @@ import {
   Alert,
   ToastAndroid,
   Button,
+  Text,
 } from "react-native";
 import { TextInput } from "react-native-paper";
 
@@ -31,15 +32,9 @@ const initialState = {
   color: "",
   description: "",
   selectedDate: "",
-  colorAvatar : ""
+  colorAvatar: "",
 };
-///
-const generateColor = () => {
-  const randomColor = Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, "0");
-  return `#${randomColor}`;
-};
+import { generateColor } from "../functions/generateColors";
 
 export function CreateUserScreen(props) {
   const [user, setUsers] = useState(initialState);
@@ -91,13 +86,12 @@ export function CreateUserScreen(props) {
       date: user.date,
       typeVehicle: user.typeVehicle,
       plaque: user.plaque,
-      color: user.color,
+      // color: user.color,
       colorAvatar: generateColor(),
       description: user.description,
       createdDoc: new Date(),
     });
     setUsers(initialState);
-    ///use this change screen after save data
     props.navigation.navigate("Reportes recientes");
   };
   /// sendData
@@ -109,7 +103,7 @@ export function CreateUserScreen(props) {
       user.date === "" ||
       user.typeVehicle === "" ||
       user.plaque === "" ||
-      user.color === "" ||
+      // user.color === "" ||
       user.description === ""
     ) {
       Alert.alert(
@@ -142,7 +136,7 @@ export function CreateUserScreen(props) {
           value={user.name}
           mode="outlined"
           label="Nombre de la persona que levanta el acta "
-          activeOutlineColor={Colors.info} //use for change color around text input
+          activeOutlineColor={Colors.info}
           onChangeText={(value) => {
             handleChangeText("name", value);
             {
@@ -181,23 +175,20 @@ export function CreateUserScreen(props) {
       </View>
       {/* colony Input */}
       <View>
+        <Text style={styles.header}>Selecciona la colonia donde ocurrio</Text>
         <Picker
           selectedValue={selectedColony}
           onValueChange={(colonySel, indexColony, name, value) =>
             updatePickerColony(colonySel, indexColony, name, value)
           }
+          prompt="Selecciona la colonia"
         >
-          <Picker.Item label="Selecciona la colonia" color="#aaa" />
           {places.map((place) => {
-            // {
-            //   user.place = place.NameOfLocation;
-            //   console.log(user.place)
-            // }
             return (
               <Picker.Item
                 key={place.place}
                 label={place.NameOfLocation}
-                value={{ place: place.place, location: place.NameOfLocation }}
+                value={place}
               />
             );
           })}
@@ -205,25 +196,22 @@ export function CreateUserScreen(props) {
       </View>
       {/* typeVehicle Input */}
       <View>
+      <Text style={styles.header}>Selecciona el vehiculo robado</Text>
         <Picker
           value={user.typeVehicle}
           selectedValue={selectedColony1}
           onValueChange={(vehicleSel, indexVehicle, name, value) =>
             updatePickerColony1(vehicleSel, indexVehicle, name, value)
           }
+          prompt="Selecciona el tipo de vehiculo"
         >
-          <Picker.Item
-            label="Selecciona el vehiculo"
-            value="disabled"
-            color="#aaa"
-          />
           <Picker.Item label="Automovil" value="Automovil" />
           <Picker.Item label="camioneta" value="camioneta" />
           <Picker.Item label="motocicleta" value="motocicleta" />
         </Picker>
       </View>
 
-      <View>
+      {/* <View>
         <Picker
           value={user.color}
           selectedValue={selectedColor}
@@ -240,7 +228,7 @@ export function CreateUserScreen(props) {
           <Picker.Item label="azul" value="azul" />
           <Picker.Item label="rojo" value="rojo" />
         </Picker>
-      </View>
+      </View> */}
       {/* plaque Input */}
       <View>
         <TextInput
@@ -285,8 +273,8 @@ export function CreateUserScreen(props) {
           color={Colors.success}
           title={"Guardar"}
           onPress={() => {
-            saveNewUser();
-            console.log(user);
+             saveNewUser();
+            console.log(user)
           }}
         />
       </View>
@@ -306,5 +294,11 @@ const styles = StyleSheet.create({
     fontSize: 17,
     marginBottom: 10,
     marginEnd: 10,
+  },
+  header: {
+    textAlign: "center",
+    fontSize: 18,
+    padding: 16,
+    marginTop: 16,
   },
 });
