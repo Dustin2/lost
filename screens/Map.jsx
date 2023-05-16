@@ -14,8 +14,6 @@ import {
   doc,
 } from "firebase/firestore";
 
-
-
 export function Map() {
   const [acta, setActa] = useState([]);
   useEffect(() => {
@@ -45,8 +43,6 @@ export function Map() {
     return unsubscribe;
   }, []);
 
-  const [repeat, setRepeat] = useState([]);
-
   return (
     <View style={styles.container}>
       <MapView
@@ -57,19 +53,19 @@ export function Map() {
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
-         customMapStyle={mapsConfig}
+        customMapStyle={mapsConfig}
       >
         {acta.map((actas) => {
           return (
-            <Marker
+            <Map.Marker
               key={actas.id}
               coordinate={actas.colony.place}
               pinColor="red"
             >
-              <Callout>
+              <Map.Callout>
                 <Text> Ultimo reporte {actas.name}</Text>
-              </Callout>
-            </Marker>
+              </Map.Callout>
+            </Map.Marker>
           );
         })}
       </MapView>

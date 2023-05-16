@@ -237,6 +237,7 @@ export const stolenCars = [
         colonyName: "ORIENTAL",
         population: 1,
       },
+      //
       {
         colonyName: "FRANCISCO I MADERO",
         population: 1,
@@ -1711,43 +1712,43 @@ export const stolenCars = [
     monthPeryear: [
       {
         month: "Enero",
-        population: 40,
+        population: 40, 
       },
       {
         month: "Febrero",
-        population: 20,
+        population: 20, 
       },
       {
         month: "Marzo",
-        population: 12,
+        population: 12, 
       },
       {
         month: "Abril",
-        population: 22,
+        population: 22, 
       },
       {
         month: "Mayo",
-        population: 18,
+        population: 18, 
       },
       {
         month: "Junio",
-        population: 22,
+        population: 22, 
       },
       {
         month: "Julio",
-        population: 14,
+        population: 14, 
       },
       {
         month: "Agosto",
-        population: 17,
+        population: 17, 
       },
       {
         month: "Septiembre",
-        population: 18,
+        population: 18, 
       },
       {
         month: "Octubre",
-        population: 8,
+        population: 8, 
       },
     ],
     schedule: [
@@ -1770,7 +1771,7 @@ export const stolenCars = [
     ],
     annualWeek: [
       {
-        numberOfWeek: "2",
+        numberOfWeek: "2",   
         population: 16,
       },
       {

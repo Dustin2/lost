@@ -32,9 +32,7 @@ import { complaints } from "../../data/complaints";
 import { arrest } from "../../data/arrest";
 import { monthPeryear } from "../../data/monthPeryear";
 import { annualWeek } from "../../data/annualWeek";
-
-//functions
-import { generateColor } from "../../functions/generateColors";
+import { coordinates2020 } from "../../data/coordinatesPerYear";
 const SecondYear = () => {
   return (
     <View>
@@ -50,15 +48,20 @@ const SecondYear = () => {
           }}
           // customMapStyle={mapsConfig}
         >
-          <Marker
-            coordinate={{ latitude: 19.240884, longitude: -103.728327 }}
-            pinColor="red"
-          >
-            <Callout>
-              <Text>Centro</Text>
-              <Text>robos totales : 18</Text>
-            </Callout>
-          </Marker>
+          {coordinates2020.map((marker, key) => {
+            return (
+              <Marker
+                key={marker.NameOfLocation}
+                coordinate={marker.place}
+                pinColor="#0066CC"
+              >
+                <Callout>
+                  <Text>{marker.NameOfLocation}</Text>
+                  <Text>robos totales: {marker.population}</Text>
+                </Callout>
+              </Marker>
+            );
+          })}
         </MapView>
       </View>
       <View style={styles.container}>
@@ -89,7 +92,8 @@ const SecondYear = () => {
               fontSize: 10,
               lineSpacing: 0.1,
             },
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -125,7 +129,8 @@ const SecondYear = () => {
               fontSize: 6.5,
               lineSpacing: 0.1,
             },
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -156,7 +161,8 @@ const SecondYear = () => {
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
             // barPercentage: 0.5,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -202,7 +208,8 @@ const SecondYear = () => {
               lineSpacing: 0,
               horizontalLabelRotation: -60,
             },
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -261,7 +268,8 @@ const SecondYear = () => {
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
             barPercentage: 0.4,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -294,7 +302,8 @@ const SecondYear = () => {
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -324,7 +333,8 @@ const SecondYear = () => {
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
           }}
           style={{
             borderRadius: 16,
@@ -356,7 +366,8 @@ const SecondYear = () => {
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
               // paddingRight: 2,
@@ -391,7 +402,8 @@ const SecondYear = () => {
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -421,7 +433,8 @@ const SecondYear = () => {
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -429,134 +442,38 @@ const SecondYear = () => {
           style={styles.chart}
         />
       </View>
+
       <View style={styles.container}>
         <Text style={styles.header}>MARCA</Text>
-        <PieChart
-          data={[
-            {
-              name: "N/A",
-              population: 4,
-              color: generateColor(),
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 10,
-            },
-            {
-              name: "VW",
-              population: 1,
-              color: generateColor(),
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 10,
-            },
-            {
-              name: "NISSAN",
-              population: 1,
-              color: generateColor(),
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 10,
-              
-            },
-            {
-              name: "N/A",
-              population: 4,
-              color: generateColor(),
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 10,
-            },
-            {
-              name: "VW",
-              population: 1,
-              color: generateColor(),
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 10,
-            },
-            {
-              name: "NISSAN",
-              population: 1,
-              color: generateColor(),
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 10,
-
-            },
-           
-          ]}
+        <BarChart
+          data={{
+            labels: ["N/A", "VW", "NISSAN", "N/A", "VW", "NISSAN"],
+            datasets: [
+              {
+                data: [4, 1, 1, 4, 1, 1],
+              },
+            ],
+          }}
           width={Dimensions.get("window").width - 16}
           height={220}
+          showValuesOnTopOfBars={true}
+          fromZero={true}
+          withHorizontalLabels={false}
+          showBarTops={false}
           chartConfig={{
             backgroundColor: "#1cc910",
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
           }}
-          style={{
-            marginVertical: 8,
-            borderRadius: 16,
-          }}
-          accessor="population"
-          backgroundColor="transparent"
-          // paddingLeft="12"
-          absolute //for the absolute number remove if you want percentage
+          style={styles.chart}
         />
       </View>
-      {/* <View style={styles.container}>
-        <Text style={styles.header}>MARCA</Text>
-        <PieChart
-          data={[
-            {
-              name: ,
-              population: 21500000,
-              color: generateColor(),
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 15,
-            },
-            {
-              name: ,
-              population: 2800000,
-              color: generateColor(),
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 15,
-            },
-            {
-              name: ,
-              population: 8538000,
-              color: generateColor(),
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 15,
-            },
-            {
-              name: ,
-              population: 11920000,
-              color: generateColor(),
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 15,
-            },
-          ]}
-          width={Dimensions.get("window").width - 16}
-          height={220}
-          chartConfig={{
-            backgroundColor: "#1cc910",
-            backgroundGradientFrom: "#eff3ff",
-            backgroundGradientTo: "#efefef",
-            decimalPlaces: 2,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-            style: {
-              borderRadius: 16,
-            },
-          }}
-          style={{
-            marginVertical: 8,
-            borderRadius: 16,
-          }}
-          accessor="population"
-          backgroundColor="transparent"
-          // paddingLeft="12"
-          // absolute //for the absolute number remove if you want percentage
-        />
-      </View> */}
     </View>
   );
 };
@@ -577,8 +494,8 @@ const styles = StyleSheet.create({
     paddingRight: 25,
   },
   map: {
-    width: 400,
-    height: 350,
+    width: 410,
+    height: 360,
   },
   chart: {
     borderRadius: 16,

@@ -30,11 +30,12 @@ import { sector } from "../../data/sector";
 import { zone } from "../../data/zone";
 import { complaints } from "../../data/complaints";
 import { arrest } from "../../data/arrest";
+import { coordinates2019 } from "../../data/coordinatesPerYear";
 
 const FisrtYear = () => {
   return (
-    <View >
-      <View >
+    <View>
+      <View style={{ borderRadius: 19 }}>
         <Text style={styles.header}>ACUMULADO GENERAL</Text>
         <MapView
           style={styles.map}
@@ -46,15 +47,20 @@ const FisrtYear = () => {
           }}
           // customMapStyle={mapsConfig}
         >
-          <Marker
-            coordinate={{ latitude: 19.240884, longitude: -103.728327 }}
-            pinColor="red"
-          >
-            <Callout>
-              <Text>Centro</Text>
-              <Text>robos totales : 18</Text>
-            </Callout>
-          </Marker>
+          {coordinates2019.map((marker, key) => {
+            return (
+              <Marker
+                key={marker.NameOfLocation}
+                coordinate={marker.place}
+                pinColor="#0066CC"
+              >
+                <Callout>
+                  <Text>{marker.NameOfLocation}</Text>
+                  <Text>robos totales: {marker.population}</Text>
+                </Callout>
+              </Marker>
+            );
+          })}
         </MapView>
       </View>
       <View style={styles.container}>
@@ -70,12 +76,18 @@ const FisrtYear = () => {
           }}
           width={Dimensions.get("window").width - 16}
           height={220}
+          showValuesOnTopOfBars={true}
+          fromZero={true}
+          withHorizontalLabels={false}
+          showBarTops={false}
+          paddingRight={false}
           chartConfig={{
             backgroundColor: "#1cc910",
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -96,13 +108,18 @@ const FisrtYear = () => {
           }}
           width={Dimensions.get("window").width - 16}
           height={220}
-          // yAxisLabel={"Rs"}
+          showValuesOnTopOfBars={true}
+          fromZero={true}
+          withHorizontalLabels={false}
+          showBarTops={false}
+          paddingRight={false}
           chartConfig={{
             backgroundColor: "#1cc910",
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
 
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -123,12 +140,18 @@ const FisrtYear = () => {
           }}
           width={Dimensions.get("window").width - 16}
           height={220}
+          showValuesOnTopOfBars={true}
+          fromZero={true}
+          withHorizontalLabels={false}
+          showBarTops={false}
+          paddingRight={false}
           chartConfig={{
             backgroundColor: "#1cc910",
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -163,6 +186,11 @@ const FisrtYear = () => {
           }}
           width={Dimensions.get("window").width - 10}
           height={220}
+          showValuesOnTopOfBars={true}
+          fromZero={true}
+          withHorizontalLabels={false}
+          showBarTops={false}
+          paddingRight={false}
           chartConfig={{
             backgroundColor: "#1cc910",
             backgroundGradientFrom: "#eff3ff",
@@ -170,7 +198,8 @@ const FisrtYear = () => {
             strokeWidth: 14,
             barPercentage: 0.4,
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -191,12 +220,18 @@ const FisrtYear = () => {
           }}
           width={Dimensions.get("window").width - 6}
           height={220}
+          showValuesOnTopOfBars={true}
+          fromZero={true}
+          withHorizontalLabels={false}
+          showBarTops={false}
+          paddingRight={false}
           chartConfig={{
             backgroundColor: "#1cc910",
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -207,124 +242,7 @@ const FisrtYear = () => {
           style={styles.chart}
         />
       </View>
-      {/* <View>
 
-        <Text style={styles.header}>2019</Text>
-        <BarChart
-          data={{
-            labels: [
-              "CENTRO",
-              "INFONAVIT LA ESTANCIA",
-              "LA ESTANCIA",
-              "FATIMA",
-              "POPULAR",
-              "BUROCRATAS",
-              "NUEVO MILENIO",
-              "EL PORVENIR",
-              "RESIDENCIAL ESMERALDA",
-              "MORALETE",
-              "LOMAS VISTA HERMOSA",
-              "LAZARO CARDENAS",
-              "LAZARO CARDENAS",
-              "FOVISSTE",
-              "ORIENTAL",
-              "FRANCISCO I MADERO",
-              " LA GUADALUPE",
-              " EL DIEZMO",
-              " LOMAS DE CIRCUNVALACION",
-              "REVOLUCION ",
-              "COLINAS DE SANTA BARBARA ",
-              "VILLAS DEL BOSQUE ",
-              "CUAHUTEMOC ",
-              " JOSEFA ORTIZ DE DOMINGUEZ",
-              " SANTA AMALIA",
-              " CAMINO REAL",
-              "VILLAS SAN JOSE ",
-              " INSURGENTES",
-              " BOSQUES DEL SUR",
-              " JARDINES DE LA CORREGIDORA",
-            ],
-            datasets: [
-              {
-                data: [
-                  8, 4, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-                  1, 1, 1, 1, 1, 1, 1, 1, 1,
-                ],
-              },
-            ],
-          }}
-          width={Dimensions.get("window").width - 16}
-          height={220}
-          // yAxisLabel={"Rs"}
-          chartConfig={{
-            backgroundColor: "#1cc910",
-            backgroundGradientFrom: "#eff3ff",
-            backgroundGradientTo: "#efefef",
-
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-            style: {
-              borderRadius: 16,
-            },
-          }}
-          style={{
-            marginVertical: 8,
-            borderRadius: 16,
-          }}
-        />
-        <Text style={styles.header}>Pie Chart</Text>
-        <PieChart
-          data={[
-            {
-              name: "Seoul",
-              population: 21500000,
-              color: "rgba(131, 167, 234, 1)",
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 15,
-            },
-            {
-              name: "Toronto",
-              population: 2800000,
-              color: "#F00",
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 15,
-            },
-            {
-              name: "New York",
-              population: 8538000,
-              color: "#ffffff",
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 15,
-            },
-            {
-              name: "Moscow",
-              population: 11920000,
-              color: "rgb(0, 0, 255)",
-              legendFontColor: "#7F7F7F",
-              legendFontSize: 15,
-            },
-          ]}
-          width={Dimensions.get("window").width - 16}
-          height={220}
-          chartConfig={{
-            backgroundColor: "#1cc910",
-            backgroundGradientFrom: "#eff3ff",
-            backgroundGradientTo: "#efefef",
-
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-            style: {
-              borderRadius: 16,
-            },
-          }}
-          style={{
-            marginVertical: 8,
-            borderRadius: 16,
-          }}
-          accessor="population"
-          backgroundColor="transparent"
-          paddingLeft="15"
-          absolute //for the absolute number remove if you want percentage
-        />
-      </View> */}
       <View style={styles.container}>
         <Text style={styles.header}>SECTOR</Text>
         <BarChart
@@ -338,12 +256,18 @@ const FisrtYear = () => {
           }}
           width={Dimensions.get("window").width - 17}
           height={220}
+          showValuesOnTopOfBars={true}
+          fromZero={true}
+          withHorizontalLabels={false}
+          showBarTops={false}
+          paddingRight={false}
           chartConfig={{
             backgroundColor: "#1cc910",
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -364,12 +288,18 @@ const FisrtYear = () => {
           }}
           width={Dimensions.get("window").width - 16}
           height={220}
+          showValuesOnTopOfBars={true}
+          fromZero={true}
+          withHorizontalLabels={false}
+          showBarTops={false}
+          paddingRight={false}
           chartConfig={{
             backgroundColor: "#1cc910",
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
           }}
           style={styles.chart}
         />
@@ -378,7 +308,7 @@ const FisrtYear = () => {
         <Text style={styles.header}>DELITO</Text>
         <BarChart
           data={{
-            labels:["ROBO DE VEHICULO"] ,
+            labels: ["ROBO DE VEHICULO"],
             datasets: [
               {
                 data: [58],
@@ -387,12 +317,18 @@ const FisrtYear = () => {
           }}
           width={Dimensions.get("window").width - 16}
           height={220}
+          showValuesOnTopOfBars={true}
+          fromZero={true}
+          withHorizontalLabels={false}
+          showBarTops={false}
+          paddingRight={false}
           chartConfig={{
             backgroundColor: "#1cc910",
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -407,18 +343,24 @@ const FisrtYear = () => {
             labels: complaints,
             datasets: [
               {
-                data: [43,15],
+                data: [43, 15],
               },
             ],
           }}
           width={Dimensions.get("window").width - 16}
           height={220}
+          showValuesOnTopOfBars={true}
+          fromZero={true}
+          withHorizontalLabels={false}
+          showBarTops={false}
+          paddingRight={false}
           chartConfig={{
             backgroundColor: "#1cc910",
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -439,12 +381,18 @@ const FisrtYear = () => {
           }}
           width={Dimensions.get("window").width - 16}
           height={220}
+          showValuesOnTopOfBars={true}
+          fromZero={true}
+          withHorizontalLabels={false}
+          showBarTops={false}
+          paddingRight={false}
           chartConfig={{
             backgroundColor: "#1cc910",
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -459,12 +407,7 @@ const FisrtYear = () => {
 export default FisrtYear;
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
-    // backgroundColor: "white",
-    // justifyContent: "center",
     alignItems: "center",
-    // textAlign: "center",
-    // padding: 2,
   },
   header: {
     textAlign: "center",
@@ -477,8 +420,8 @@ const styles = StyleSheet.create({
     paddingRight: 25,
   },
   map: {
-    width: 400,
-    height: 350,
+    width: 410,
+    height: 360,
   },
   chart: {
     borderRadius: 16,

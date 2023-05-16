@@ -32,9 +32,10 @@ import { complaints } from "../../data/complaints";
 import { arrest } from "../../data/arrest";
 import { monthPeryear } from "../../data/monthPeryear";
 import { annualWeek } from "../../data/annualWeek";
+import { coordinates2021 } from "../../data/coordinatesPerYear";
 
 //functions
-import { generateColor } from "../../functions/generateColors";
+
 const ThirdYear = () => {
   return (
     <View>
@@ -50,15 +51,20 @@ const ThirdYear = () => {
           }}
           // customMapStyle={mapsConfig}
         >
-          <Marker
-            coordinate={{ latitude: 19.240884, longitude: -103.728327 }}
-            pinColor="red"
-          >
-            <Callout>
-              <Text>Centro</Text>
-              <Text>robos totales : 18</Text>
-            </Callout>
-          </Marker>
+          {coordinates2021.map((marker, key) => {
+            return (
+              <Marker
+                key={marker.NameOfLocation}
+                coordinate={marker.place}
+                pinColor="#0066CC"
+              >
+                <Callout>
+                  <Text>{marker.NameOfLocation}</Text>
+                  <Text>robos totales: {marker.population}</Text>
+                </Callout>
+              </Marker>
+            );
+          })}
         </MapView>
       </View>
       <View style={styles.container}>
@@ -89,7 +95,8 @@ const ThirdYear = () => {
               fontSize: 10,
               lineSpacing: 0.1,
             },
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -125,7 +132,8 @@ const ThirdYear = () => {
               fontSize: 6.5,
               lineSpacing: 0.1,
             },
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -156,7 +164,8 @@ const ThirdYear = () => {
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
             // barPercentage: 0.5,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -274,7 +283,8 @@ const ThirdYear = () => {
               lineSpacing: 0,
               horizontalLabelRotation: -60,
             },
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -308,7 +318,8 @@ const ThirdYear = () => {
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
             barPercentage: 0.4,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -341,7 +352,8 @@ const ThirdYear = () => {
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -371,7 +383,8 @@ const ThirdYear = () => {
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
           }}
           style={{
             borderRadius: 16,
@@ -403,7 +416,8 @@ const ThirdYear = () => {
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
               // paddingRight: 2,
@@ -438,7 +452,8 @@ const ThirdYear = () => {
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -468,7 +483,8 @@ const ThirdYear = () => {
             backgroundGradientFrom: "#eff3ff",
             backgroundGradientTo: "#efefef",
             decimalPlaces: 0,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -528,7 +544,8 @@ const ThirdYear = () => {
               lineSpacing: 0,
               horizontalLabelRotation: -60,
             },
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -588,7 +605,8 @@ const ThirdYear = () => {
               lineSpacing: 0,
               horizontalLabelRotation: -60,
             },
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 1) => `rgba(0, 102, 204, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
