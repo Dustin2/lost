@@ -4,12 +4,12 @@
     "slug": "lost",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/zyro-image.png",
     "userInterfaceStyle":" dark",
     "splash": {
-      "image": "./assets/stolen.png",
+      "image": "./assets/zyro-image.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#2196f3"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

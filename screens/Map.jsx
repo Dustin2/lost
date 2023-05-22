@@ -22,11 +22,6 @@ export function Map() {
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       console.log("querySnapshot unsusbscribe");
-      setRepeat(
-        querySnapshot.docs.map((doc) => ({
-          colony: doc.data().colony.location,
-        }))
-      );
       setActa(
         querySnapshot.docs.map((doc) => ({
           id: doc.id,
@@ -40,8 +35,40 @@ export function Map() {
         }))
       );
     });
+    console.log(acta);
     return unsubscribe;
   }, []);
+  function ordenarObjetosPorRepeticiones(matriz) {
+    // Crear un objeto vacío para almacenar la cuenta de cada objeto
+    let objetoRecuento = {};
+
+    // Recorrer la matriz y agregar 1 al valor de cada objeto en el objeto de recuento
+    matriz.forEach((objeto) => {
+      objetoRecuento[objeto] = (objetoRecuento[objeto] || 0) + 1;
+    });
+
+    // Convertir el objeto de recuento en una matriz de tuplas [clave, valor] para poder ordenarla por el valor
+    let tuplas = Object.entries(objetoRecuento);
+
+    // Ordenar la matriz de tuplas en orden descendente por el valor
+    tuplas.sort((a, b) => b[1] - a[1]);
+
+    // Crear una nueva matriz para almacenar los objetos ordenados por repeticiones
+    let objetosOrdenados = [];
+
+    // Recorrer la matriz de tuplas ordenadas y agregar los objetos al resultado
+    tuplas.forEach((tupla) => {
+      let objeto = tupla[0];
+      let repeticiones = tupla[1];
+
+      // Agregar el objeto repeticiones veces a la matriz de objetos ordenados
+      for (let i = 0; i < repeticiones; i++) {
+        objetosOrdenados.push(objeto);
+      }
+    });
+
+    return objetosOrdenados;
+  }
 
   return (
     <View style={styles.container}>
@@ -55,17 +82,19 @@ export function Map() {
         }}
         customMapStyle={mapsConfig}
       >
-        {acta.map((actas) => {
+        {acta.map((markers) => {
           return (
-            <Map.Marker
-              key={actas.id}
-              coordinate={actas.colony.place}
-              pinColor="red"
+            <Marker
+              key={markers.colony.NameOfLocation}
+              coordinate={markers.colony.place}
+              pinColor="#0066CC"
             >
-              <Map.Callout>
-                <Text> Ultimo reporte {actas.name}</Text>
-              </Map.Callout>
-            </Map.Marker>
+              <Callout>
+                <Text>{markers.NameOfLocation}</Text>
+                <Text> {markers.colony.NameOfLocation}</Text>
+                {/* <Text>robos totales: {markers.population}</Text> */}
+              </Callout>
+            </Marker>
           );
         })}
       </MapView>

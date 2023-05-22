@@ -427,3 +427,251 @@ export const coordinates2022 = [
     population: 5,
   },
 ];
+
+export const coordinatesRecu2020 = [
+  {
+    NameOfLocation: "CENTRO",
+    place: { latitude: 19.2403456, longitude: -103.7281926 },
+  },
+  {
+    NameOfLocation: "LOMAS DE CIRCUNVALACIÓN",
+    place: { latitude: 19.2521079, longitude: -103.7361573 },
+  },
+  {
+    NameOfLocation: "LAS VÍBORAS",
+    place: { latitude: 19.2418574, longitude: -103.6891003 },
+  },
+  {
+    NameOfLocation: "ORIENTAL",
+    place: { latitude: 19.2421671, longitude: -103.6816495 },
+  },
+  {
+    NameOfLocation: "EL DIEZMO",
+    place: { latitude: 19.2453448, longitude: -103.700682 },
+  },
+  {
+    NameOfLocation: "BOSQUES DEL SUR",
+    place: { latitude: 19.2501764, longitude: -103.7137127 },
+  },
+  {
+    NameOfLocation: "LA VIRGENCITA",
+    place: { latitude: 19.2556275, longitude: -103.6898241 },
+  },
+  {
+    NameOfLocation: "LÁZARO CÁRDENAS",
+    place: { latitude: 19.261226, longitude: -103.6857314 },
+  },
+  {
+    NameOfLocation: "TEPAMES",
+    place: { latitude: 19.2230784, longitude: -103.7064733 },
+  },
+  {
+    NameOfLocation: "LAS HACIENDAS",
+    place: { latitude: 19.2402585, longitude: -103.7053874 },
+  },
+  {
+    NameOfLocation: "JUANA DE ASBAJE",
+    place: { latitude: 19.2468068, longitude: -103.7053874 },
+  },
+  {
+    NameOfLocation: "FOVISSSTE",
+    place: { latitude: 19.2306833, longitude: -103.7021298 },
+  },
+  {
+    NameOfLocation: "UNIDAD ANTORCHISTA MIRADOR DE LA CUMBRE",
+    place: { latitude: 19.2362351, longitude: -103.7535364 },
+  },
+  {
+    NameOfLocation: "EL PORVENIR",
+    place: { latitude: 19.2460673, longitude: -103.7390537 },
+  },
+  {
+    NameOfLocation: "POPULAR",
+    place: { latitude: 19.2452342, longitude: -103.7240868 },
+  },
+  {
+    NameOfLocation: "CAMINO REAL",
+    place: { latitude: 19.2557399, longitude: -103.7314509 },
+  },
+  {
+    NameOfLocation: "JARDINES VISTA HERMOSA",
+    place: { latitude: 19.2423747, longitude: -103.7397778 },
+  },
+  {
+    NameOfLocation: "EL TIVOLI",
+    place: { latitude: 19.2268945, longitude: -103.7137127 },
+  },
+];
+
+export const coordinatesRecu2021 = [
+  {
+    NameOfLocation: "CENTRO",
+    place: { latitude: 19.2403456, longitude: -103.7281926 },
+  },
+  {
+    NameOfLocation: "LAS HACIENDAS",
+    place: { latitude: 19.2521079, longitude: -103.7361573 },
+  },
+  {
+    NameOfLocation: "FÁTIMA",
+    place: { latitude: 19.2418574, longitude: -103.6891003 },
+  },
+  {
+    NameOfLocation: "ORIENTAL",
+    place: { latitude: 19.2421671, longitude: -103.6816495 },
+  },
+  {
+    NameOfLocation: "NUEVO MILENIO",
+    place: { latitude: 19.2453448, longitude: -103.700682 },
+  },
+  {
+    NameOfLocation: "FRANCISCO VILLA",
+    place: { latitude: 19.2501764, longitude: -103.7137127 },
+  },
+  {
+    NameOfLocation: "VILLA SAN SEBASTIÁN",
+    place: { latitude: 19.2556275, longitude: -103.6898241 },
+  },
+  {
+    NameOfLocation: "LAS VÍBORAS",
+    place: { latitude: 19.261226, longitude: -103.6857314 },
+  },
+  {
+    NameOfLocation: "LOMAS DE CIRCUNVALACIÓN",
+    place: { latitude: 19.2230784, longitude: -103.7064733 },
+  },
+  {
+    NameOfLocation: "LÁZARO CÁRDENAS",
+    place: { latitude: 19.2402585, longitude: -103.7053874 },
+  },
+  {
+    NameOfLocation: "LA VIRGENCITA",
+    place: { latitude: 19.2468068, longitude: -103.7053874 },
+  },
+  {
+    NameOfLocation: "JARDINES VISTA HERMOSA",
+    place: { latitude: 19.2306833, longitude: -103.7021298 },
+  },
+  {
+    NameOfLocation: "BOSQUES DEL SUR",
+    place: { latitude: 19.2362351, longitude: -103.7535364 },
+  },
+  {
+    NameOfLocation: "INFONAVIT LA ESTANCIA",
+    place: { latitude: 19.2460673, longitude: -103.7390537 },
+  },
+  {
+    NameOfLocation: "EL TECOLOTE",
+    place: { latitude: 19.2452342, longitude: -103.7240868 },
+  },
+  {
+    NameOfLocation: "EL TIVOLI",
+    place: { latitude: 19.2557399, longitude: -103.7314509 },
+  },
+];
+export const coordinatesRecu2022 = [
+  {
+    NameOfLocation: "CENTRO",
+    place: { latitude: 19.2403456, longitude: -103.7281926 },
+  },
+  {
+    NameOfLocation: "FÁTIMA",
+    place: { latitude: 19.2521079, longitude: -103.7361573 },
+  },
+  {
+    NameOfLocation: "LÁZARO CÁRDENAS",
+    place: { latitude: 19.2418574, longitude: -103.6891003 },
+  },
+  {
+    NameOfLocation: "VILLA SAN SEBASTIÁN ANDARES DEL JAZMIN",
+    place: { latitude: 19.2421671, longitude: -103.6816495 },
+  },
+  {
+    NameOfLocation: "ORIENTAL",
+    place: { latitude: 19.2453448, longitude: -103.700682 },
+  },
+  {
+    NameOfLocation: "LOMAS DE CIRCUNVALACIÓN",
+    place: { latitude: 19.2501764, longitude: -103.7137127 },
+  },
+  {
+    NameOfLocation: "EL PORVENIR",
+    place: { latitude: 19.2556275, longitude: -103.6898241 },
+  },
+  {
+    NameOfLocation: "CAMINO REAL",
+    place: { latitude: 19.261226, longitude: -103.6857314 },
+  },
+  {
+    NameOfLocation: "NUEVO MILENIO",
+    place: { latitude: 19.2230784, longitude: -103.7064733 },
+  },
+  {
+    NameOfLocation: "INFONAVIT CAMINO REAL SIN INFORMACION",
+    place: { latitude: 19.2402585, longitude: -103.7053874 },
+  },
+  {
+    NameOfLocation: "LAS VIBORAS",
+    place: { latitude: 19.2468068, longitude: -103.7053874 },
+  },
+  {
+    NameOfLocation: "SANTA AMALIA",
+    place: { latitude: 19.2306833, longitude: -103.7021298 },
+  },
+  {
+    NameOfLocation: "RESIDENCIAL PRADOS DEL SUR",
+    place: { latitude: 19.2362351, longitude: -103.7535364 },
+  },
+  {
+    NameOfLocation: "PLACETAS ESTADIO",
+    place: { latitude: 19.2460673, longitude: -103.7390537 },
+  },
+  {
+    NameOfLocation: "LAS AMÉRICAS",
+    place: { latitude: 19.2452342, longitude: -103.7240868 },
+  },
+  {
+    NameOfLocation: "SAN FRANCISCO",
+    place: { latitude: 19.2557399, longitude: -103.7314509 },
+  },
+  {
+    NameOfLocation: "VILLAS DEL BOSQUE",
+    place: { latitude: 19.2423747, longitude: -103.7397778 },
+  },
+  {
+    NameOfLocation: "JARDINES VISTA HERMOSA FRANCISCO VILLA",
+    place: { latitude: 19.2268945, longitude: -103.7137127 },
+  },
+  {
+    NameOfLocation: "PUERTA PARAÍSO",
+    place: { latitude: 19.259101, longitude: -103.6919956 },
+  },
+  {
+    NameOfLocation: "GREGORIO TORRES QUINTERO",
+    place: { latitude: 19.2286073, longitude: -103.7390537 },
+  },
+  {
+    NameOfLocation: "REVOLUCIÓN LO DE VILLA",
+    place: { latitude: 19.2320469, longitude: -103.7694411 },
+  },
+  {
+    NameOfLocation: "SAN JOSÉ SUR",
+    place: { latitude: 19.2291113, longitude: -103.6988723 },
+  },
+  {
+    NameOfLocation: "GUADALAJARITA",
+    place: { latitude: 19.2511915, longitude: -103.7195045 },
+  },
+  {
+    NameOfLocation: "LA ARMONÍA FRANCISCO I MADERO",
+    place: { latitude: 19.2392759, longitude: -103.6847574 },
+  },
+  {
+    NameOfLocation: "LAS FUENTES",
+    place: { latitude: 19.2366761, longitude: -103.7477431 },
+  },
+  {
+    NameOfLocation: "EL YAQUI BOSQUES DEL SUR",
+    place: { latitude: 19.2191995, longitude: -103.7369232 },
+  },
+];

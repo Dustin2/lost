@@ -29,3 +29,23 @@ const ShowChartsRecu = () => {
 };
 
 export default ShowChartsRecu;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    padding: 10,
+  },
+  header: {
+    textAlign: "center",
+    fontSize: 18,
+    padding: 16,
+    marginTop: 16,
+  },
+  graphStyle: {
+    flex: 1,
+    paddingRight: 25,
+  },
+});

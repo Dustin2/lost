@@ -1,7 +1,7 @@
 //Dependencies
 import React, { useState, useEffect } from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
-import { ListItem, Avatar } from "react-native-elements";
+import { ListItem, Avatar, FAB } from "react-native-elements";
 
 //firebase
 import { database } from "../firebase/firebase";
@@ -14,6 +14,7 @@ import {
   querySnapshot,
   doc,
 } from "firebase/firestore";
+import { Colors } from "../assets/colors";
 
 export function Inicio(props) {
   useEffect(() => {
@@ -79,6 +80,12 @@ export function Inicio(props) {
             </ListItem>
           );
         })}
+        {/* <FAB
+          style={styles.fab}
+          animated={true}
+          color={Colors.primary}
+          onPress={() => console.log("Pressed")}
+        /> */}
       </ScrollView>
     </View>
   );
@@ -88,5 +95,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "gray",
+  },
+  fab: {
+    position: "absolute",
+    margin: 16,
+    right: 0,
+    bottom: 0,
   },
 });

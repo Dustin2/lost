@@ -30,9 +30,11 @@ import { sector } from "../../data/sector";
 import { zone } from "../../data/zone";
 import { complaints } from "../../data/complaints";
 import { arrest } from "../../data/arrest";
+import { monthPeryear } from "../../data/monthPeryear";
+import { annualWeek } from "../../data/annualWeek";
 import { coordinates2019 } from "../../data/coordinatesPerYear";
-
 const FisrtYear = () => {
+
   return (
     <View>
       <View style={{ borderRadius: 19 }}>
@@ -242,7 +244,6 @@ const FisrtYear = () => {
           style={styles.chart}
         />
       </View>
-
       <View style={styles.container}>
         <Text style={styles.header}>SECTOR</Text>
         <BarChart
