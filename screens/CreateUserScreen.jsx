@@ -56,13 +56,13 @@ export function CreateUserScreen(props) {
   };
 
   ///Update Colony
-  const [selectedColony, setSelectedColony] = useState();
+  const [selectedColony, setSelectedColony] = useState("no seleccionado");
   const updatePickerColony = (colonySel, indexColony, name, value) => {
     handleChangeText("colony", colonySel);
     setSelectedColony(colonySel);
   };
   ///Update Colony
-  const [selectedColony1, setSelectedColony1] = useState();
+  const [selectedColony1, setSelectedColony1] = useState("no seleccionado");
   const updatePickerColony1 = (vehicleSel, indexVehicle, name, value) => {
     handleChangeText("typeVehicle", vehicleSel);
     setSelectedColony1(vehicleSel);
@@ -92,6 +92,7 @@ export function CreateUserScreen(props) {
       createdDoc: new Date(),
     });
     setUsers(initialState);
+    setSelectedDate("")
     props.navigation.navigate("Reportes recientes");
   };
 
@@ -108,13 +109,13 @@ export function CreateUserScreen(props) {
     ) {
       Alert.alert(
         "Error Campos invalidos",
-        "Porfavor copleta todos los campos"
+        "Porfavor completa todos los campos"
       );
     } else {
       Alert.alert("Confirmar", "Desea guardar los cambios actuales?", [
         {
           text: "Cancelar",
-          onPress: () => ToastAndroid.show("cancel!", ToastAndroid.SHORT),
+          onPress: () => ToastAndroid.show("cancelado!", ToastAndroid.SHORT),
           style: "cancel",
         },
         {
@@ -190,15 +191,15 @@ export function CreateUserScreen(props) {
             }
             prompt="Selecciona la colonia"
           >
-           {places.map((place) => {
-            return (
-              <Picker.Item
-                key={place.place}
-                label={place.NameOfLocation}
-                value={place}
-              />
-            );
-          })}
+            {places.map((place, i) => {
+              return (
+                <Picker.Item
+                  key={place.place}
+                  label={place.NameOfLocation}
+                  value={place}
+                />
+              );
+            })}
           </Picker>
         </View>
         {/* typeVehicle Input */}
@@ -220,11 +221,14 @@ export function CreateUserScreen(props) {
         {/* car model Input */}
         <View>
           <TextInput
-            // style={{ marginBottom: 10 }}
             mode="outlined"
             left={<TextInput.Icon icon="car" />}
-            label={"Modelo del auto"}
+            label={"Modelo del vehiculo"}
             activeOutlineColor={Colors.info}
+            onChangeText={(value) => {
+              handleChangeText("model", value);
+            }}
+            value={user.model}
           />
         </View>
         {/* plaque Input */}
@@ -256,16 +260,17 @@ export function CreateUserScreen(props) {
             }}
           />
         </View>
+        {/* submit button */}
         <View style={styles.inputGroup}>
           <Button
             buttonColor={Colors.success}
             icon="content-save-check"
             mode="contained"
             onPress={() => {
-              saveNewUser();
+               saveNewUser();
               console.log(user);
             }}
-            style={{ marginTop: 15 }}
+            style={{ marginTop: 25,marginBottom:25 }}
           >
             Guardar
           </Button>

@@ -1,7 +1,13 @@
 //Dependencies
 import React, { useState, useEffect } from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
-import { ListItem, Avatar, FAB } from "react-native-elements";
+import {
+  ListItem,
+  Avatar,
+  FAB,
+  Portal,
+  PaperProvider,
+} from "react-native-elements";
 
 //firebase
 import { database } from "../firebase/firebase";
@@ -22,7 +28,6 @@ export function Inicio(props) {
     const q = query(collectionRef, orderBy("colony", "desc"));
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      console.log("querySnapshot unsusbscribe");
       const datos = [];
       setActa(
         querySnapshot.docs.map((doc) => ({
@@ -43,18 +48,15 @@ export function Inicio(props) {
   }, []);
   const [acta, setActa] = useState([]);
 
+  // const goToScreen = () => {
+  //   props.navigation.navigate("Crear reporte");
+  // };
   return (
     <View styles={styles.container}>
       <ScrollView>
         {acta.map((actas) => {
           return (
-            <ListItem
-              bottomDivider
-              key={actas.id}
-              onPress={() => {
-                props.navigation.navigate("Mapa");
-              }}
-            >
+            <ListItem bottomDivider key={actas.id}>
               <ListItem.Chevron />
               <Avatar
                 size={32}
@@ -80,12 +82,20 @@ export function Inicio(props) {
             </ListItem>
           );
         })}
-        {/* <FAB
-          style={styles.fab}
-          animated={true}
-          color={Colors.primary}
-          onPress={() => console.log("Pressed")}
-        /> */}
+        {/* <View
+          style={{
+            flex: 1,
+            justifyContent: "flex-end",
+            alignItems: "flex-end",
+            padding: 16,
+          }}
+        >
+          <FAB
+            style={{ position: "absolute", margin: 16, right: 0, bottom: 0 }}
+            icon="plus"
+            onPress={() => goToScreen()}
+          />
+        </View> */}
       </ScrollView>
     </View>
   );

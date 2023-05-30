@@ -24,7 +24,10 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 const Menu = createDrawerNavigator();
 
-export default function App() {
+const goToScreen = () => {
+  navigation.navigate("Crear reporte");
+};
+export default function App(props) {
   return (
     <NavigationContainer>
       <Menu.Navigator
@@ -81,7 +84,7 @@ export default function App() {
             headerTitle: "Mapa",
           }}
         />
-        <Menu.Screen
+        {/* <Menu.Screen
           name="Autos robados"
           component={ShowCharts}
           options={{
@@ -102,7 +105,7 @@ export default function App() {
               <MaterialIcons name="car-repair" size={22} color={color} />
             ),
           }}
-        />
+        /> */}
       </Menu.Navigator>
       <StatusBar style="light" />
     </NavigationContainer>
