@@ -11,7 +11,7 @@ import {
 } from "react-native";
 
 //components
-import ChartsRecu from "../components/charts/ChartsRecu";
+import Charts from "../components/charts/Charts";
 import MyPicker from "../components/picker/Picker";
 const ShowCharts = () => {
   return (
@@ -19,7 +19,7 @@ const ShowCharts = () => {
       <ScrollView>
         <View style={styles.container}>
           <View>
-            <ChartsRecu />
+            <Charts />
           </View>
         </View>
       </ScrollView>

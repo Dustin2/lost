@@ -14,8 +14,8 @@ import { Colors } from "./assets/colors";
 import { Inicio } from "./screens/Inicio";
 import { CreateUserScreen } from "./screens/CreateUserScreen";
 import { Map } from "./screens/Map";
-import ShowChartsRecu from "./screens/ShowCharts";
 import ShowCharts from "./screens/ShowCharts";
+import ShowChartsRecu from "./screens/ShowChartsRecu";
 import CustomMenu from "./components/CustomMenu";
 //icons//
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -24,7 +24,10 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 const Menu = createDrawerNavigator();
 
-export default function App() {
+const goToScreen = () => {
+  navigation.navigate("Crear reporte");
+};
+export default function App(props) {
   return (
     <NavigationContainer>
       <Menu.Navigator
@@ -45,28 +48,6 @@ export default function App() {
         }}
       >
         <Menu.Screen
-          name="Robos por año"
-          component={ShowCharts}
-          options={{
-            drawerIcon: ({ color }) => (
-              <MaterialCommunityIcons
-                name="car-emergency"
-                size={22}
-                color={color}
-              />
-            ),
-          }}
-        />
-        <Menu.Screen
-          name="autos recuperados"
-          component={ShowChartsRecu}
-          options={{
-            drawerIcon: ({ color }) => (
-              <MaterialIcons name="car-repair" size={22} color={color} />
-            ),
-          }}
-        />
-        <Menu.Screen
           name="Reportes recientes"
           component={Inicio}
           options={{
@@ -75,6 +56,7 @@ export default function App() {
             ),
           }}
         />
+
         <Menu.Screen
           name="Crear reporte"
           component={CreateUserScreen}
@@ -103,15 +85,27 @@ export default function App() {
           }}
         />
         {/* <Menu.Screen
-          name="Grafica"
-          component={Charts}
+          name="Autos robados"
+          component={ShowCharts}
           options={{
             drawerIcon: ({ color }) => (
-              <Ionicons name="map-outline" size={22} color={color} />
+              <MaterialCommunityIcons
+                name="car-emergency"
+                size={22}
+                color={color}
+              />
             ),
-            headerTitle: "Mapa",
           }}
-        />  */}
+        />
+        <Menu.Screen
+          name="autos recuperados"
+          component={ShowChartsRecu}
+          options={{
+            drawerIcon: ({ color }) => (
+              <MaterialIcons name="car-repair" size={22} color={color} />
+            ),
+          }}
+        /> */}
       </Menu.Navigator>
       <StatusBar style="light" />
     </NavigationContainer>
