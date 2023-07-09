@@ -41,87 +41,87 @@ export function Map() {
     });
     return unsubscribe;
   }, []);
-  // Utilizar filter() y typeof para extraer los strings
-  const arrayDeStrings = acta.filter(
-    (objeto) => typeof objeto.colony.NameOfLocation === "string"
-  );
-  // Imprimir el resultado
-  //  console.log(arrayDeStrings);
+  // // Utilizar filter() y typeof para extraer los strings
+  // const arrayDeStrings = acta.filter(
+  //   (objeto) => typeof objeto.colony.NameOfLocation === "string"
+  // );
+  // // Imprimir el resultado
+  // //  console.log(arrayDeStrings);
 
-  {
-    arrayDeStrings.map((obj, index) => {
-      newArray.push(obj.colony.NameOfLocation);
-      // return <Text key={index}>{obj.colony.NameOfLocation}</Text>;
-    });
+  // {
+  //   arrayDeStrings.map((obj, index) => {
+  //     newArray.push(obj.colony.NameOfLocation);
+  //     // return <Text key={index}>{obj.colony.NameOfLocation}</Text>;
+  //   });
 
-    newArray.forEach((palabra) => {
-      if (contador[palabra]) {
-        contador[palabra]++;
-      } else {
-        contador[palabra] = 1;
-      }
-      console.log(contador);
-    });
-  }
-
-  // const resultado = contarPalabrasRepetidas(newArray);
-  // console.log(resultado);
-  const newArray2 = [];
- 
-  colony.map((place) => {
-    newArray2.push(place.colonyName.toLocaleUpperCase());
-    // console.log(newArray2);
-  });
-
-  let results = places.filter((obj) =>
-    newArray.includes(
-      obj.NameOfLocation.toLocaleUpperCase()
-      // newArray.includes(obj.NameOfLocation.toLocaleUpperCase())
-    )
-  );
-  // if (results.length > 0) {
-  //   console.log(results); // this will not be executed because results is an empty array
-  // } else {
-  //   console.log("No matches found.");
+  //   newArray.forEach((palabra) => {
+  //     if (contador[palabra]) {
+  //       contador[palabra]++;
+  //     } else {
+  //       contador[palabra] = 1;
+  //     }
+  //     console.log(contador);
+  //   });
   // }
-  const finalColony = [];
-  finalColony.push(results);
-  console.log(results);
+
+  // // const resultado = contarPalabrasRepetidas(newArray);
+  // // console.log(resultado);
+  // const newArray2 = [];
+ 
+  // colony.map((place) => {
+  //   newArray2.push(place.colonyName.toLocaleUpperCase());
+  //   // console.log(newArray2);
+  // });
+
+  // let results = places.filter((obj) =>
+  //   newArray.includes(
+  //     obj.NameOfLocation.toLocaleUpperCase()
+  //     // newArray.includes(obj.NameOfLocation.toLocaleUpperCase())
+  //   )
+  // );
+  // // if (results.length > 0) {
+  // //   console.log(results); // this will not be executed because results is an empty array
+  // // } else {
+  // //   console.log("No matches found.");
+  // // }
+  // const finalColony = [];
+  // finalColony.push(results);
+  // console.log(results);
 
 
-  function encontrarValorMasRepetido(array) {
+  // function encontrarValorMasRepetido(array) {
  
   
-    // Recorrer el array y contar las frecuencias de cada elemento
-    for (var i = 0; i < array.length; i++) {
-      var elemento = array[i];
-      if (frecuencias[elemento]) {
-        // Si el elemento ya está en el objeto de frecuencias, incrementar su contador
-        frecuencias[elemento]++;
-      } else {
-        // Si el elemento no está en el objeto de frecuencias, inicializar su contador en 1
-        frecuencias[elemento] = 1;
-      }
-    }
+  //   // Recorrer el array y contar las frecuencias de cada elemento
+  //   for (var i = 0; i < array.length; i++) {
+  //     var elemento = array[i];
+  //     if (frecuencias[elemento]) {
+  //       // Si el elemento ya está en el objeto de frecuencias, incrementar su contador
+  //       frecuencias[elemento]++;
+  //     } else {
+  //       // Si el elemento no está en el objeto de frecuencias, inicializar su contador en 1
+  //       frecuencias[elemento] = 1;
+  //     }
+  //   }
   
-    // Encontrar el valor que más se repite
-    var valorMasRepetido;
-    var contadorMaximo = 0;
+  //   // Encontrar el valor que más se repite
+  //   var valorMasRepetido;
+  //   var contadorMaximo = 0;
   
-    for (var elemento in frecuencias) {
-      if (frecuencias[elemento] > contadorMaximo) {
-        contadorMaximo = frecuencias[elemento];
-        valorMasRepetido = elemento;
-      }
-    }
+  //   for (var elemento in frecuencias) {
+  //     if (frecuencias[elemento] > contadorMaximo) {
+  //       contadorMaximo = frecuencias[elemento];
+  //       valorMasRepetido = elemento;
+  //     }
+  //   }
   
-    return valorMasRepetido;
-  }
+  //   return valorMasRepetido;
+  // }
   
-  // Ejemplo de uso
-  var array = [1, 2, 3, 2, 2, 4, 5, 4, 2];
-  var valorMasRepetido = encontrarValorMasRepetido(array);
-  console.log("El valor que más se repite es: " + valorMasRepetido);
+  // // Ejemplo de uso
+  // var array = [1, 2, 3, 2, 2, 4, 5, 4, 2];
+  // var valorMasRepetido = encontrarValorMasRepetido(array);
+  // console.log("El valor que más se repite es: " + valorMasRepetido);
   return (
     <View style={styles.container}>
       <MapView
