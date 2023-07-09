@@ -84,7 +84,7 @@ export default function App(props) {
             headerTitle: "Mapa",
           }}
         />
-        {/* <Menu.Screen
+        <Menu.Screen
           name="Autos robados"
           component={ShowCharts}
           options={{
@@ -105,7 +105,7 @@ export default function App(props) {
               <MaterialIcons name="car-repair" size={22} color={color} />
             ),
           }}
-        /> */}
+        />
       </Menu.Navigator>
       <StatusBar style="light" />
     </NavigationContainer>

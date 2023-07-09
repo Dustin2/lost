@@ -92,7 +92,7 @@ export function CreateUserScreen(props) {
       createdDoc: new Date(),
     });
     setUsers(initialState);
-    setSelectedDate("")
+    setSelectedDate("");
     props.navigation.navigate("Reportes recientes");
   };
 
@@ -267,12 +267,19 @@ export function CreateUserScreen(props) {
             icon="content-save-check"
             mode="contained"
             onPress={() => {
-               saveNewUser();
+              saveNewUser();
               console.log(user);
             }}
-            style={{ marginTop: 25,marginBottom:25 }}
+            style={{ marginTop: 25, marginBottom: 25 }}
           >
             Guardar
+          </Button>
+          <Button
+             style={{ marginTop: 25, marginBottom: 25 }}
+             mode="contained"
+             onPress={() => props.navigation.openDrawer()}
+          >
+            open modal
           </Button>
         </View>
       </ScrollView>

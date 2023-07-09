@@ -10,7 +10,7 @@ import { Colors } from "../assets/colors";
 
 export default function CustomMenu(props) {
   return (
-    <View style={{ flex: 1, backgroundColor: '#283541'}}>
+    <View style={{ flex: 1, backgroundColor: "#283541" }}>
       <View
         style={{
           height: 200,
@@ -20,10 +20,7 @@ export default function CustomMenu(props) {
         }}
       ></View>
       <DrawerContentScrollView {...props}>
-        <DrawerItemList {...props}
-       
-
-        />
+        <DrawerItemList {...props} />
       </DrawerContentScrollView>
     </View>
   );

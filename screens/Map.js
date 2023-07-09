@@ -19,6 +19,7 @@ import {
 import { places } from "../Places/Places";
 export function Map() {
   const [acta, setActa] = useState([]);
+  let contador = {};
   const newArray = [];
   useEffect(() => {
     const collectionRef = collection(database, "actas");
@@ -45,95 +46,85 @@ export function Map() {
     (objeto) => typeof objeto.colony.NameOfLocation === "string"
   );
   // Imprimir el resultado
-  // console.log(arrayDeStrings);
+  //  console.log(arrayDeStrings);
 
   {
     arrayDeStrings.map((obj, index) => {
       newArray.push(obj.colony.NameOfLocation);
       // return <Text key={index}>{obj.colony.NameOfLocation}</Text>;
     });
-  }
-  function contarPalabrasRepetidas(arr) {
-    let contador = {};
 
-    arr.forEach((palabra) => {
+    newArray.forEach((palabra) => {
       if (contador[palabra]) {
         contador[palabra]++;
       } else {
         contador[palabra] = 1;
       }
+      console.log(contador);
     });
-
-    return contador;
   }
 
-  const resultado = contarPalabrasRepetidas(newArray);
+  // const resultado = contarPalabrasRepetidas(newArray);
   // console.log(resultado);
+  const newArray2 = [];
+ 
+  colony.map((place) => {
+    newArray2.push(place.colonyName.toLocaleUpperCase());
+    // console.log(newArray2);
+  });
 
-  const [markers, setMarkers] = useState([]);
-  const data = [
-    "manzana",
-    "pera",
-    "manzana",
-    "uva",
-    "pera",
-    "manzana",
-    "naranja",
-  ];
-  useEffect(() => {
-    // Contar las ocurrencias de cada palabra
-    const wordCount = {};
-    newArray.forEach((word) => {
-      wordCount[word] = (wordCount[word] || 0) + 1;
-    });
+  let results = places.filter((obj) =>
+    newArray.includes(
+      obj.NameOfLocation.toLocaleUpperCase()
+      // newArray.includes(obj.NameOfLocation.toLocaleUpperCase())
+    )
+  );
+  // if (results.length > 0) {
+  //   console.log(results); // this will not be executed because results is an empty array
+  // } else {
+  //   console.log("No matches found.");
+  // }
+  const finalColony = [];
+  finalColony.push(results);
+  console.log(results);
 
-    // Determinar las palabras que se repiten más y menos veces
-    const maxCount = Math.max(...Object.values(wordCount));
-    const minCount = Math.min(...Object.values(wordCount));
 
-    // Crear los marcadores con los colores y coordenadas correspondientes
-    const markers = data.map((word, index) => {
-      let markerColor = "yellow";
-      if (wordCount[word] === maxCount) {
-        markerColor = "red";
-      } else if (wordCount[word] === minCount) {
-        markerColor = "green";
+  function encontrarValorMasRepetido(array) {
+ 
+  
+    // Recorrer el array y contar las frecuencias de cada elemento
+    for (var i = 0; i < array.length; i++) {
+      var elemento = array[i];
+      if (frecuencias[elemento]) {
+        // Si el elemento ya está en el objeto de frecuencias, incrementar su contador
+        frecuencias[elemento]++;
+      } else {
+        // Si el elemento no está en el objeto de frecuencias, inicializar su contador en 1
+        frecuencias[elemento] = 1;
       }
-
-      let coordinates = { latitude: 0, longitude: 0 }; // Agrega las coordenadas correctas
-      // Puedes obtener las coordenadas según la palabra o utilizando algún método adicional
-
-      return (
-        <Marker key={index} coordinate={coordinates} pinColor={markerColor} />
-      );
-    });
-
-    setMarkers(markers);
-  }, []);
-
-  // Array de objetos
-  const objetos = [
-    { id: 1, nombre: "Objeto 1" },
-    { id: 2, nombre: "Objeto 2" },
-    { id: 3, nombre: "Objeto 3" },
-  ];
-
-  // Palabras a buscar
-  const palabras = ["Objeto 1", "Objeto 3"];
-
-  // Función de búsqueda
-  function buscarObjeto(newArray) {
-    return places.find((objeto) => objeto  === newArray);
+    }
+  
+    // Encontrar el valor que más se repite
+    var valorMasRepetido;
+    var contadorMaximo = 0;
+  
+    for (var elemento in frecuencias) {
+      if (frecuencias[elemento] > contadorMaximo) {
+        contadorMaximo = frecuencias[elemento];
+        valorMasRepetido = elemento;
+      }
+    }
+  
+    return valorMasRepetido;
   }
-
-  // Buscar las palabras en el array de objetos
-  const objetosEncontrados = palabras.map(buscarObjeto);
-
-  console.log(objetosEncontrados);
-
+  
+  // Ejemplo de uso
+  var array = [1, 2, 3, 2, 2, 4, 5, 4, 2];
+  var valorMasRepetido = encontrarValorMasRepetido(array);
+  console.log("El valor que más se repite es: " + valorMasRepetido);
   return (
     <View style={styles.container}>
-      {/* <MapView
+      <MapView
         style={styles.map}
         initialRegion={{
           latitude: 19.24997,
@@ -157,12 +148,14 @@ export function Map() {
             </Marker>
           );
         })}
-      </MapView> */}
-
+      </MapView>
+{/* 
       {newArray.map((obj, index) => {
         return <Text key={index}>{obj}</Text>;
-      })}
-      <MapView style={{ flex: 1 }}>{markers}</MapView>
+      })} */}
+     {/* {newArray.map((obj, index,contador) =>{
+      return <Text key={index}>{contador}</Text>;
+     })} */}
     </View>
   );
 }

@@ -7,19 +7,13 @@ import {
   FAB,
   Portal,
   PaperProvider,
+  Button,
 } from "react-native-elements";
 
 //firebase
 import { database } from "../firebase/firebase";
-import {
-  collection,
-  onSnapshot,
-  query,
-  orderBy,
-  serverTimestamp,
-  querySnapshot,
-  doc,
-} from "firebase/firestore";
+// import database from "../database/database";
+import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 import { Colors } from "../assets/colors";
 
 export function Inicio(props) {
@@ -48,12 +42,16 @@ export function Inicio(props) {
   }, []);
   const [acta, setActa] = useState([]);
 
-  // const goToScreen = () => {
-  //   props.navigation.navigate("Crear reporte");
-  // };
   return (
     <View styles={styles.container}>
       <ScrollView>
+        <Button
+          style={{ marginTop: 25, marginBottom: 25 }}
+          mode="contained"
+          onPress={() => props.navigation.openDrawer()}
+        >
+          open modal
+        </Button>
         {acta.map((actas) => {
           return (
             <ListItem bottomDivider key={actas.id}>
@@ -69,7 +67,7 @@ export function Inicio(props) {
                 <ListItem.Subtitle>
                   Lugar: {actas.colony.location}
                 </ListItem.Subtitle>
-                {/* <ListItem.Subtitle>Nombre:{actas.name}</ListItem.Subtitle> */}
+
                 <ListItem.Subtitle>
                   Tipo de vehiculo: {actas.typeVehicle}
                 </ListItem.Subtitle>
@@ -82,20 +80,6 @@ export function Inicio(props) {
             </ListItem>
           );
         })}
-        {/* <View
-          style={{
-            flex: 1,
-            justifyContent: "flex-end",
-            alignItems: "flex-end",
-            padding: 16,
-          }}
-        >
-          <FAB
-            style={{ position: "absolute", margin: 16, right: 0, bottom: 0 }}
-            icon="plus"
-            onPress={() => goToScreen()}
-          />
-        </View> */}
       </ScrollView>
     </View>
   );

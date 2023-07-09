@@ -6,10 +6,11 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "eas-build-pre-install": "npm config set legacy-peer-deps true"
   },
   "dependencies": {
-    "@expo/config-plugins": "^6.0.0",
+    "@expo/config-plugins": "~6.0.0",
     "@expo/webpack-config": "^18.0.1",
     "@react-native-community/datetimepicker": "6.7.3",
     "@react-native-masked-view/masked-view": "0.2.8",
@@ -24,9 +25,9 @@
     "expo-chart-kit": "^1.2.4",
     "expo-linear-gradient": "~12.1.2",
     "expo-location": "~15.1.1",
-    "expo-splash-screen": "^0.18.2",
-    "expo-status-bar": "~1.4.2",
-    "firebase": "^9.17.1",
+    "expo-splash-screen": "~0.18.2",
+    "expo-status-bar": "~1.4.4",
+    "firebase": "^9.22.2",
     "moment": "^2.29.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -42,11 +43,11 @@
     "react-native-screens": "~3.20.0",
     "react-native-svg": "13.4.0",
     "react-native-vector-icons": "^9.2.0",
-    "react-native-web": "~0.18.10",
+    "react-native-web": "~0.18.11",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.3",
+    "@babel/core": "^7.20.0",
     "metro-react-native-babel-preset": "^0.75.0"
   },
   "private": true
